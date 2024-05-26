@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+        .container {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .card-panel {
+            padding: 20px;
+            margin: auto;
+        }
+        #header {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: #1976D2;
+            color: white;
+            margin-bottom: 20px;
+        }
+        #footer {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-color: #1976D2;
+            color: white;
+        }
+        .social-icons {
+            font-size: 24px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .social-icons a {
+            margin-left: 10px;
+            color: white;
+        }
+        .page-controls {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .page-controls button {
+            margin: 0 10px;
+        }
+        #pdfCanvas {
+            display: none;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h3>ManoDarpan</h3>
+    </header>
+
+    <div class="container">
+        <div class="card-panel" id="pdfCardPanel">
+            <div class="input-field col s12">
+                <label for="pdfDropdown">Select a PDF:</label>
+                <select id="pdfDropdown" class="browser-default">
+                    <option value="" disabled selected>Select a PDF</option>
+                    <option value="p1">Resume</option>
+                    <option value="p2">Basic Link 1</option>
+                </select>
+            </div>
+            <canvas id="pdfCanvas" class="z-depth-2"></canvas>
+            <div id="controls" class="page-controls">
+                <button id="prevPage" class="btn waves-effect waves-light">Previous</button>
+                <span>Page: <span id="pageNum">0</span> / <span id="pageCount">0</span></span>
+                <button id="nextPage" class="btn waves-effect waves-light">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer blue darken-4" id="footer">
+        <div class="container">
+            <div class="row valign-wrapper">
+                <div class="col s12 m6">
+                    <p>&copy; 2024 ManoDarpan. All rights reserved.</p>
+                </div>
+                <div class="col s12 m6 right-align">
+                    <span class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script>
+        const PDF_URLS = {
+            'p1': 'https://raw.githubusercontent.com/kalpitakhawat/kalpitakhawat.github.io/master/resume.pdf',
+            'p2': 'https://www.antennahouse.com/hubfs/xsl-fo-sample/pdf/basic-link-1.pdf'
+        };
+
+        let pdfDoc = null,
+            pageNum = 1,
+            pageRendering = false,
+            pageNumPending = null,
+            scale = 1.5,
+            canvas = document.getElementById('pdfCanvas'),
+            ctx = canvas.getContext('2d');
+
+        document.getElementById('pdfDropdown').addEventListener('change', displayPDF);
+        document.getElementById('prevPage').addEventListener('click', prevPage);
+        document.getElementById('nextPage').addEventListener('click', nextPage);
+
+        // Variables to detect swipe gesture
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        // Add touch event listeners to the canvas
+        canvas.addEventListener('touchstart', handleTouchStart, false);
+        canvas.addEventListener('touchend', handleTouchEnd, false);
+
+        function handleTouchStart(evt) {
+            touchStartX = evt.changedTouches[0].screenX;
+        }
+
+        function handleTouchEnd(evt) {
+            touchEndX = evt.changedTouches[0].screenX;
+            handleGesture();
+        }
+
+        function handleGesture() {
+            if (touchEndX <= touchStartX) {
+                nextPage();
+            }
+            if (touchEndX > touchStartX) {
+                prevPage();
+            }
+        }
+
+        function displayPDF() {
+            const selectedPdf = document.getElementById('pdfDropdown').value;
+            if (selectedPdf) {
+                const pdfUrl = PDF_URLS[selectedPdf];
+                loadPDF(pdfUrl);
+                canvas.style.display = 'block';  // Show canvas when a PDF is selected
+                adjustCardPanelHeight(); // Adjust card panel height when a PDF is selected
+            }
+        }
+
+        function loadPDF(url) {
+            pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
+                pdfDoc = pdfDoc_;
+                document.getElementById('pageCount').textContent = pdfDoc.numPages;
+                pageNum = 1;
+                renderPage(pageNum);
+                document.getElementById('controls').style.display = 'flex';
+            }).catch(error => {
+                console.error('Error loading PDF:', error);
+                alert('Error loading PDF.');
+            });
+        }
+
+        function renderPage(num) {
+            pageRendering = true;
+            pdfDoc.getPage(num).then(page => {
+                const viewport = page.getViewport({ scale: scale });
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                const renderContext = {
+                    canvasContext: ctx,
+                    viewport: viewport
+                };
+
+                const renderTask = page.render(renderContext);
+
+                renderTask.promise.then(() => {
+                    pageRendering = false;
+                    if (pageNumPending !== null) {
+                        renderPage(pageNumPending);
+                        pageNumPending = null;
+                    }
+                    adjustCardPanelHeight(); // Adjust card panel height after rendering
+                });
+
+                // Update card panel size to match canvas size
+                const cardPanel = document.getElementById('pdfCardPanel');
+                cardPanel.style.height = `${viewport.height + 100}px`; // Adding some padding for controls
+                cardPanel.style.width = `${viewport.width + 40}px`; // Adding some padding for canvas
+            });
+
+            document.getElementById('pageNum').textContent = pageNum;
+        }
+
+        function queueRenderPage(num) {
+            if (pageRendering) {
+                pageNumPending = num;
+            } else {
+                renderPage(num);
+            }
+        }
+
+        function prevPage() {
+            if (pageNum <= 1) {
+                return;
+            }
+            pageNum--;
+            queueRenderPage(pageNum);
+        }
+
+        function nextPage() {
+            if (pageNum >= pdfDoc.numPages) {
+                return;
+            }
+            pageNum++;
+            queueRenderPage(pageNum);
+        }
+
+        function adjustCardPanelHeight() {
+            const cardPanel = document.getElementById('pdfCardPanel');
+            const footer = document.getElementById('footer');
+            const controls = document.getElementById('controls');
+            const canvasHeight = canvas.clientHeight;
+            const windowHeight = window.innerHeight;
+            const headerHeight = document.getElementById('header').clientHeight;
+            const footerHeight = footer.clientHeight;
+
+            const availableHeight = windowHeight - headerHeight - footerHeight - controls.clientHeight - 40; // 40px for additional margin
+            if (canvasHeight < availableHeight) {
+                controls.style.marginBottom = `${availableHeight - canvasHeight}px`;
+            } else {
+                controls.style.marginBottom = '20px'; // default margin if no extra space needed
+            }
+        }
+
+        window.addEventListener('resize', adjustCardPanelHeight);
+    </script>
+</body>
+</html>
