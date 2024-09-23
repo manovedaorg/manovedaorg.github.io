@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manoveda Wellnness Hub</title>
+  <title>Manoveda Wellness Hub</title>
 
   <!-- Materialize CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
@@ -44,6 +44,7 @@
           <li><a href="#services">Services</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#intake-form">Intake Form</a></li>
         </ul>
       </div>
     </nav>
@@ -146,88 +147,51 @@
   </div>
 </section>
 
-<!-- Custom Styling for the Team Section -->
-<style>
-  .team-section {
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  .team-member {
-    margin-bottom: 40px; /* Increase spacing between members */
-    padding: 20px;
-  }
+<!-- Intake Form Section -->
+<section id="intake-form" class="section container">
+  <h4 class="center-align">Client Intake Form</h4>
+  <div class="row">
+    <form action="https://docs.google.com/forms/d/e/AKfycbxIG2r3va9ah9XFKdO0ZEOgk_tpM6HjFVLVPK0NEC_D/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+      <!-- Form integrated with Google Forms -->
+      
+      <div class="input-field col s12">
+        <input id="name" type="text" name="entry.1234567890" required>
+        <label for="name">Name</label>
+      </div>
 
-  .team-member img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow around images */
-    margin-bottom: 20px; /* Space between image and text */
-  }
+      <div class="input-field col s12">
+        <input id="email" type="email" name="entry.0987654321" required>
+        <label for="email">Email</label>
+      </div>
 
-  .team-name {
-    font-size: 1.5rem; /* Larger font for names */
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
+      <div class="input-field col s12">
+        <input id="phone" type="tel" name="entry.1122334455" required>
+        <label for="phone">Phone Number</label>
+      </div>
 
-  .team-role {
-    font-size: 1.2rem; /* Slightly smaller role text */
-    color: #666; /* Light gray color for role */
-  }
+      <div class="input-field col s12">
+        <textarea id="message" class="materialize-textarea" name="entry.5566778899" required></textarea>
+        <label for="message">Message</label>
+      </div>
 
-  .team-section h4 {
-    font-size: 2.2rem;
-    margin-bottom: 30px;
-  }
-</style>
+      <div class="center">
+        <button type="submit" class="btn waves-effect waves-light teal">Submit</button>
+      </div>
 
-  
+      <!-- Hidden iframe to prevent form redirect -->
+      <iframe name="hidden_iframe" style="display:none;"></iframe>
+    </form>
+  </div>
 
-  <!-- Contact Form Section -->
-  <section id="contact" class="section container">
-    <h4 class="center-align">Contact Us</h4>
-    <div class="row">
-      <form action="https://docs.google.com/forms/d/YOUR_GOOGLE_FORM_ID/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
-        <!-- Replace YOUR_GOOGLE_FORM_ID with your actual Google Form ID -->
-        
-        <div class="input-field col s12">
-          <input id="name" type="text" name="entry.YOUR_NAME_ENTRY_ID" required>
-          <!-- Replace YOUR_NAME_ENTRY_ID with the correct entry ID for "Name" -->
-          <label for="name">Name</label>
-        </div>
-
-        <div class="input-field col s12">
-          <input id="email" type="email" name="entry.YOUR_EMAIL_ENTRY_ID" required>
-          <!-- Replace YOUR_EMAIL_ENTRY_ID with the correct entry ID for "Email" -->
-          <label for="email">Email</label>
-        </div>
-
-        <div class="input-field col s12">
-          <textarea id="message" class="materialize-textarea" name="entry.YOUR_MESSAGE_ENTRY_ID" required></textarea>
-          <!-- Replace YOUR_MESSAGE_ENTRY_ID with the correct entry ID for "Message" -->
-          <label for="message">Message</label>
-        </div>
-
-        <div class="center">
-          <button type="submit" class="btn waves-effect waves-light teal">Submit</button>
-        </div>
-
-        <!-- Hidden iframe to prevent form redirect -->
-        <iframe name="hidden_iframe" style="display:none;"></iframe>
-      </form>
-    </div>
-
-    <p id="form-status" class="center-align"></p>
-  </section>
+  <p id="form-status" class="center-align"></p>
+</section>
 
   <!-- Footer -->
   <footer class="page-footer teal">
     <div class="container">
       <div class="row">
         <div class="col s12 center-align">
-          <p>&copy; 2024 Manoveda Wellnness Hub. All rights reserved.</p>
+          <p>&copy; 2024 Manoveda Wellness Hub. All rights reserved.</p>
         </div>
       </div>
     </div>
