@@ -13,12 +13,21 @@
 
   <style>
     /* Custom Styles */
+    body {
+      background-color: #f9f9f9; /* Light background for calmness */
+      color: #333; /* Dark gray text for readability */
+    }
     .hero-section {
       padding: 100px 0;
+      background-color: #009688; /* Teal for tranquility and balance */
+      color: white; /* White text for contrast */
+    }
+    .nav-wrapper {
+      background-color: #004d40; /* Dark teal for stability */
     }
     .page-footer {
       padding: 20px 0;
-      background-color: #004d40;
+      background-color: #004d40; /* Dark teal */
     }
     .team-section img {
       border-radius: 50%;
@@ -29,29 +38,39 @@
       text-align: center;
       padding: 20px;
     }
+    .form-status {
+      margin-top: 20px;
+      color: #4CAF50; /* Green for positive feedback */
+    }
+    .btn {
+      background-color: #00796b; /* Dark teal for action buttons */
+    }
+    .btn:hover {
+      background-color: #004d40; /* Darker teal for hover effect */
+    }
   </style>
 </head>
 <body>
 
   <!-- Header / Navigation -->
   <header>
-    <nav class="nav-wrapper teal">
+    <nav class="nav-wrapper">
       <div class="container">
         <a href="#" class="brand-logo">Manoveda</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-          <li><a href="#intake-form">Intake Form</a></li>
+          <li><a href="#home" class="white-text">Home</a></li>
+          <li><a href="#about" class="white-text">About Us</a></li>
+          <li><a href="#services" class="white-text">Services</a></li>
+          <li><a href="#team" class="white-text">Team</a></li>
+          <li><a href="#contact" class="white-text">Contact Us</a></li>
+          <li><a href="#intake-form" class="white-text">Intake Form</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="hero-section teal lighten-2 white-text center">
+  <section id="home" class="hero-section center">
     <div class="container">
       <h1>Holistic Mental Health for a Balanced Life</h1>
       <p>Personalized care that promotes well-being and emotional resilience.</p>
@@ -105,89 +124,80 @@
     </div>
   </section>
 
- <!-- Team Section -->
-<section id="team" class="team-section section container">
-  <h4 class="center-align">Meet Our Team</h4>
-  <div class="row">
-    <!-- Team Member 1 -->
-    <div class="col s12">
-      <div class="team-member">
-        <img src="https://via.placeholder.com/150" alt="Team Member 1">
-        <h5 class="team-name">Pranjal Vyaas</h5>
-        <p class="team-role">Founder</p>
+  <!-- Team Section -->
+  <section id="team" class="team-section section container">
+    <h4 class="center-align">Meet Our Team</h4>
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="team-member">
+          <img src="https://via.placeholder.com/150" alt="Team Member 1">
+          <h5 class="team-name">Pranjal Vyaas</h5>
+          <p class="team-role">Founder</p>
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="team-member">
+          <img src="https://via.placeholder.com/150" alt="Team Member 2">
+          <h5 class="team-name">Vasundhra Rangra</h5>
+          <p class="team-role">COO</p>
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="team-member">
+          <img src="https://via.placeholder.com/150" alt="Team Member 3">
+          <h5 class="team-name">Vigya Saxena</h5>
+          <p class="team-role">Head Social Media</p>
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="team-member">
+          <img src="https://via.placeholder.com/150" alt="Team Member 4">
+          <h5 class="team-name">Jenny Macwan</h5>
+          <p class="team-role">Psychologist</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Team Member 2 -->
-    <div class="col s12">
-      <div class="team-member">
-        <img src="https://via.placeholder.com/150" alt="Team Member 2">
-        <h5 class="team-name">Vasundhra Rangra</h5>
-        <p class="team-role">COO</p>
-      </div>
+  <!-- Intake Form Section -->
+  <section id="intake-form" class="section container">
+    <h4 class="center-align">Client Intake Form</h4>
+    <div class="row">
+      <form action="https://docs.google.com/forms/d/e/AKfycbxIG2r3va9ah9XFKdO0ZEOgk_tpM6HjFVLVPK0NEC_D/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+        <div class="input-field col s12">
+          <input id="name" type="text" name="entry.1234567890" required>
+          <label for="name">Name</label>
+        </div>
+
+        <div class="input-field col s12">
+          <input id="email" type="email" name="entry.0987654321" required>
+          <label for="email">Email</label>
+        </div>
+
+        <div class="input-field col s12">
+          <input id="phone" type="tel" name="entry.1122334455" required>
+          <label for="phone">Phone Number</label>
+        </div>
+
+        <div class="input-field col s12">
+          <textarea id="message" class="materialize-textarea" name="entry.5566778899" required></textarea>
+          <label for="message">Message</label>
+        </div>
+
+        <div class="center">
+          <button type="submit" class="btn waves-effect waves-light">Submit</button>
+        </div>
+
+        <!-- Hidden iframe to prevent form redirect -->
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
+      </form>
     </div>
 
-    <!-- Team Member 3 -->
-    <div class="col s12">
-      <div class="team-member">
-        <img src="https://via.placeholder.com/150" alt="Team Member 3">
-        <h5 class="team-name">Vigya Saxena</h5>
-        <p class="team-role">Head Social Media</p>
-      </div>
-    </div>
-
-    <!-- Team Member 4 -->
-    <div class="col s12">
-      <div class="team-member">
-        <img src="https://via.placeholder.com/150" alt="Team Member 4">
-        <h5 class="team-name">Jenny Macwan</h5>
-        <p class="team-role">Psychologist</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Intake Form Section -->
-<section id="intake-form" class="section container">
-  <h4 class="center-align">Client Intake Form</h4>
-  <div class="row">
-    <form action="https://docs.google.com/forms/d/e/AKfycbxIG2r3va9ah9XFKdO0ZEOgk_tpM6HjFVLVPK0NEC_D/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
-      <!-- Form integrated with Google Forms -->
-      
-      <div class="input-field col s12">
-        <input id="name" type="text" name="entry.1234567890" required>
-        <label for="name">Name</label>
-      </div>
-
-      <div class="input-field col s12">
-        <input id="email" type="email" name="entry.0987654321" required>
-        <label for="email">Email</label>
-      </div>
-
-      <div class="input-field col s12">
-        <input id="phone" type="tel" name="entry.1122334455" required>
-        <label for="phone">Phone Number</label>
-      </div>
-
-      <div class="input-field col s12">
-        <textarea id="message" class="materialize-textarea" name="entry.5566778899" required></textarea>
-        <label for="message">Message</label>
-      </div>
-
-      <div class="center">
-        <button type="submit" class="btn waves-effect waves-light teal">Submit</button>
-      </div>
-
-      <!-- Hidden iframe to prevent form redirect -->
-      <iframe name="hidden_iframe" style="display:none;"></iframe>
-    </form>
-  </div>
-
-  <p id="form-status" class="center-align"></p>
-</section>
+    <p id="form-status" class="form-status center-align"></p>
+  </section>
 
   <!-- Footer -->
-  <footer class="page-footer teal">
+  <footer class="page-footer">
     <div class="container">
       <div class="row">
         <div class="col s12 center-align">
@@ -200,7 +210,7 @@
   <script>
     var submitted = false;
 
-    // Optional: Handle successful form submission message
+    // Handle successful form submission message
     function checkSubmission() {
       if (submitted) {
         document.getElementById('form-status').innerText = "Thank you! Your submission has been received.";
