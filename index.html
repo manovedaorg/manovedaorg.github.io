@@ -26,76 +26,92 @@
       margin: 0;
       padding: 0;
       background: #f5f5f5;
-      transition: background-color 0.5s, color 0.5s;
+      color: #fff;
     }
+
     .hero-section {
       position: relative;
       padding: 100px 0;
-      background: url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
+      background: linear-gradient(to bottom right, #9c27b0, #f44336);
       color: white;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
+
     .hero-section h1 {
       font-size: 3rem;
       font-family: 'Montserrat', sans-serif;
-      animation: fadeIn 1s forwards;
-      animation-delay: 0.5s;
     }
+
     .hero-section p {
       font-size: 1.5rem;
-      animation: fadeIn 1s forwards;
-      animation-delay: 0.8s;
     }
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+
     .service-card {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
+
     .service-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
-    .coming-soon {
-      text-align: center;
-      padding: 20px;
-      font-size: 1.5rem;
-      color: #004d40;
-    }
+
     .btn-large {
+      background-color: #9c27b0; /* Purple */
+      color: white;
       border-radius: 25px;
       transition: background-color 0.3s;
     }
+
     .btn-large:hover {
-      background-color: #00796b;
+      background-color: #f44336; /* Red */
     }
+
     .form-container {
       background: white;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
+
+    .coming-soon {
+      text-align: center;
+      padding: 20px;
+      font-size: 1.5rem;
+      color: #9c27b0; /* Purple */
+    }
+
+    .success-message {
+      color: #4caf50; /* Green for success message */
+    }
+
+    /* Dark Mode Adjustments */
     .dark-mode {
       background-color: #121212;
-      color: white;
+      color: #ffffff;
     }
+
     .dark-mode .hero-section {
-      background: rgba(0, 0, 0, 0.7) url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
+      background: linear-gradient(to bottom right, #6a1b9a, #b71c1c);
     }
-    .dark-mode .page-footer {
-      background-color: #1e1e1e;
+
+    .dark-mode .card {
+      background-color: #1e1e1e; /* Dark background for cards */
+      color: #ffffff; /* Light text color */
     }
-    @media (max-width: 600px) {
-      .hero-section h1 {
-        font-size: 2rem;
-      }
-      .hero-section p {
-        font-size: 1.2rem;
-      }
+
+    .dark-mode .input-field input,
+    .dark-mode .input-field textarea {
+      background-color: #424242; /* Dark input fields */
+      color: #ffffff; /* Light text color in inputs */
+    }
+
+    .dark-mode .input-field label {
+      color: #b0bec5; /* Lighter label color */
+    }
+
+    .dark-mode .success-message {
+      color: #a5d6a7; /* Success message color */
     }
   </style>
 </head>
@@ -103,29 +119,29 @@
 
   <!-- Header -->
   <header role="navigation">
-    <nav class="nav-wrapper teal">
+    <nav class="nav-wrapper purple darken-1">
       <div class="container">
-        <a href="#" class="brand-logo">Manoveda</a>
+        <a href="#" class="brand-logo white-text">Manoveda</a>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="#home" aria-current="page">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Connect with Us</a></li>
-          <li><a href="#intake-form">Intake Form</a></li>
-          <li><a href="javascript:void(0);" id="dark-mode-toggle" class="waves-effect waves-light teal-text">Toggle Dark Mode</a></li>
+          <li><a href="#home" class="white-text">Home</a></li>
+          <li><a href="#about" class="white-text">About Us</a></li>
+          <li><a href="#services" class="white-text">Services</a></li>
+          <li><a href="#team" class="white-text">Team</a></li>
+          <li><a href="#blog" class="white-text">Blog</a></li>
+          <li><a href="#contact" class="white-text">Connect with Us</a></li>
+          <li><a href="#intake-form" class="white-text">Intake Form</a></li>
+          <li><a href="javascript:void(0);" id="dark-mode-toggle" class="waves-effect waves-light white-text">Toggle Dark Mode</a></li>
         </ul>
         <ul class="sidenav" id="mobile-demo">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Connect with Us</a></li>
-          <li><a href="#intake-form">Intake Form</a></li>
-          <li><a href="javascript:void(0);" id="dark-mode-toggle" class="waves-effect waves-light teal-text">Toggle Dark Mode</a></li>
+          <li><a href="#home" class="white-text">Home</a></li>
+          <li><a href="#about" class="white-text">About Us</a></li>
+          <li><a href="#services" class="white-text">Services</a></li>
+          <li><a href="#team" class="white-text">Team</a></li>
+          <li><a href="#blog" class="white-text">Blog</a></li>
+          <li><a href="#contact" class="white-text">Connect with Us</a></li>
+          <li><a href="#intake-form" class="white-text">Intake Form</a></li>
+          <li><a href="javascript:void(0);" id="dark-mode-toggle" class="waves-effect waves-light white-text">Toggle Dark Mode</a></li>
         </ul>
       </div>
     </nav>
@@ -136,8 +152,8 @@
     <div class="container">
       <h1>Holistic Mental Health for a Balanced Life</h1>
       <p>Personalized care that promotes well-being and emotional resilience.</p>
-      <a href="#services" class="btn-large waves-effect waves-light white teal-text">Get Started</a>
-      <a href="#about" class="btn-large waves-effect waves-light white teal-text">Learn More</a>
+      <a href="#services" class="btn-large waves-effect waves-light">Get Started</a>
+      <a href="#about" class="btn-large waves-effect waves-light">Learn More</a>
     </div>
   </section>
 
@@ -158,7 +174,7 @@
             <p>One-on-one therapy for personal mental health needs.</p>
           </div>
           <div class="card-action">
-            <a href="#intake-form" class="waves-effect waves-light teal-text">Book Now</a>
+            <a href="#!" class="waves-effect waves-light teal-text">Learn More</a>
           </div>
         </div>
       </div>
@@ -166,21 +182,10 @@
         <div class="card service-card hoverable">
           <div class="card-content">
             <span class="card-title"><i class="card-icon fas fa-users"></i> Group Therapy</span>
-            <p>Group sessions to share experiences and heal together.</p>
+            <p>Support groups for shared experiences and healing.</p>
           </div>
           <div class="card-action">
-            <a href="#intake-form" class="waves-effect waves-light teal-text">Book Now</a>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 m6">
-        <div class="card service-card hoverable">
-          <div class="card-content">
-            <span class="card-title"><i class="card-icon fas fa-balance-scale"></i> Workshops</span>
-            <p>Interactive workshops focusing on mental health and wellness.</p>
-          </div>
-          <div class="card-action">
-            <a href="#intake-form" class="waves-effect waves-light teal-text">Book Now</a>
+            <a href="#!" class="waves-effect waves-light teal-text">Learn More</a>
           </div>
         </div>
       </div>
@@ -276,33 +281,33 @@
     <div class="row center">
       <div class="col s3">
         <a href="https://www.facebook.com/manovedaorg" target="_blank" aria-label="Facebook">
-          <i class="fab fa-facebook-f fa-3x teal-text"></i>
+          <i class="fab fa-facebook-f fa-3x purple-text"></i>
         </a>
       </div>
       <div class="col s3">
         <a href="https://x.com/manovedaorg" target="_blank" aria-label="Twitter">
-          <i class="fab fa-twitter fa-3x teal-text"></i>
+          <i class="fab fa-twitter fa-3x purple-text"></i>
         </a>
       </div>
       <div class="col s3">
         <a href="https://www.instagram.com/manoveda_org/" target="_blank" aria-label="Instagram">
-          <i class="fab fa-instagram fa-3x teal-text"></i>
+          <i class="fab fa-instagram fa-3x purple-text"></i>
         </a>
       </div>
       <div class="col s3">
         <a href="https://www.linkedin.com/company/manovedaorg" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in fa-3x teal-text"></i>
+          <i class="fab fa-linkedin-in fa-3x purple-text"></i>
         </a>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="page-footer teal">
+  <footer class="page-footer purple darken-1">
     <div class="container">
       <div class="row">
         <div class="col s12 center-align">
-          <p>&copy; 2024 Manoveda Wellness Hub. All rights reserved.</p>
+          <p class="white-text">&copy; 2024 Manoveda Wellness Hub. All rights reserved.</p>
         </div>
       </div>
     </div>
@@ -353,4 +358,3 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
 </body>
 </html>
-
