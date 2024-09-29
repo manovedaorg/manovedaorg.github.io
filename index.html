@@ -49,11 +49,14 @@
     .service-card {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      background-color: #01003C; /* Dark Blue */
+      color: white;
     }
 
     .service-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      background-color: #970836; /* Dark Red */
     }
 
     .btn-large {
@@ -68,7 +71,7 @@
     }
 
     .form-container {
-      background: white;
+      background: #ffffff;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -95,7 +98,7 @@
       background: linear-gradient(to bottom right, #01003C, #970836);
     }
 
-    .dark-mode .card {
+    .dark-mode .service-card {
       background-color: #1e1e1e; /* Dark background for cards */
       color: #ffffff; /* Light text color */
     }
@@ -112,6 +115,15 @@
 
     .dark-mode .success-message {
       color: #a5d6a7; /* Success message color */
+    }
+
+    footer {
+      background-color: #01003C; /* Dark Blue */
+      color: white;
+    }
+
+    footer p {
+      margin: 0;
     }
   </style>
 </head>
@@ -198,10 +210,10 @@
     <div class="row">
       <div class="col s12 m4">
         <div class="team-member">
-          <img src="https://via.placeholder.com/150" alt="Pranjal Vyaas, Founder" loading="lazy">
-          <h5 class="team-name">Pranjal Vyaas</h5>
-          <p class="team-role">Founder</p>
-          <p class="team-description">Pranjal combines modern psychology with Vedic practices for holistic healing.</p>
+          <img src="https://via.placeholder.com/150" alt="Kritika Kumar, Founder" loading="lazy">
+          <h5 class="team-name">Kritika Kumar</h5>
+          <p class="team-role">Founder & Psychologist</p>
+          <p class="team-description">Kritika leads our team with a passion for mental wellness and holistic care.</p>
         </div>
       </div>
       <div class="col s12 m4">
