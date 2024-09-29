@@ -5,67 +5,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Manoveda Wellness Hub offers holistic mental health care blending modern psychology with ancient Vedic wisdom.">
   <title>Manoveda Wellness Hub</title>
-  
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <!-- Materialize CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
   
-  <!-- Materialize JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
 
   <style>
-    /* Custom Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+      transition: background-color 0.5s, color 0.5s;
+    }
     .hero-section {
+      position: relative;
       padding: 100px 0;
+      background: url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     }
-    .page-footer {
-      padding: 20px 0;
-      background-color: #004d40;
+    .hero-section h1 {
+      font-size: 3rem;
+      font-family: 'Montserrat', sans-serif;
+      animation: fadeIn 1s forwards;
+      animation-delay: 0.5s;
     }
-    .team-section img {
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
+    .hero-section p {
+      font-size: 1.5rem;
+      animation: fadeIn 1s forwards;
+      animation-delay: 0.8s;
     }
-    .team-member {
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .service-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    .coming-soon {
       text-align: center;
       padding: 20px;
+      font-size: 1.5rem;
+      color: #004d40;
     }
-    #contact img {
-      transition: transform 0.3s;
+    .btn-large {
+      border-radius: 25px;
+      transition: background-color 0.3s;
     }
-    #contact img:hover {
-      transform: scale(1.1);
+    .btn-large:hover {
+      background-color: #00796b;
     }
-    .active-link {
-      font-weight: bold;
-      border-bottom: 2px solid white;
+    .form-container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+    .dark-mode .hero-section {
+      background: rgba(0, 0, 0, 0.7) url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
+    }
+    .dark-mode .page-footer {
+      background-color: #1e1e1e;
+    }
+    @media (max-width: 600px) {
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+      .hero-section p {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header / Navigation -->
+  <!-- Header -->
   <header role="navigation">
     <nav class="nav-wrapper teal">
       <div class="container">
         <a href="#" class="brand-logo">Manoveda</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="#home" aria-current="page">Home</a></li>
           <li><a href="#about">About Us</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#team">Team</a></li>
+          <li><a href="#blog">Blog</a></li>
           <li><a href="#contact">Connect with Us</a></li>
           <li><a href="#intake-form">Intake Form</a></li>
+          <li><a href="javascript:void(0);" id="dark-mode-toggle" class="waves-effect waves-light teal-text">Toggle Dark Mode</a></li>
+        </ul>
+        <ul class="sidenav" id="mobile-demo">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Connect with Us</a></li>
+          <li><a href="#intake-form">Intake Form</a></li>
+          <li><a href="javascript:void(0);" id="dark-mode-toggle" class="waves-effect waves-light teal-text">Toggle Dark Mode</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="hero-section teal lighten-2 white-text center">
+  <section id="home" class="hero-section center">
     <div class="container">
       <h1>Holistic Mental Health for a Balanced Life</h1>
       <p>Personalized care that promotes well-being and emotional resilience.</p>
@@ -85,34 +152,35 @@
     <h4 class="center-align">Our Services</h4>
     <div class="row">
       <div class="col s12 m6">
-        <div class="card">
+        <div class="card service-card hoverable">
           <div class="card-content">
-            <span class="card-title">Individual Therapy</span>
+            <span class="card-title"><i class="card-icon fas fa-user"></i> Individual Therapy</span>
             <p>One-on-one therapy for personal mental health needs.</p>
           </div>
+          <div class="card-action">
+            <a href="#intake-form" class="waves-effect waves-light teal-text">Book Now</a>
+          </div>
         </div>
       </div>
       <div class="col s12 m6">
-        <div class="card">
+        <div class="card service-card hoverable">
           <div class="card-content">
-            <span class="card-title">Group Therapy</span>
+            <span class="card-title"><i class="card-icon fas fa-users"></i> Group Therapy</span>
             <p>Group sessions to share experiences and heal together.</p>
           </div>
-        </div>
-      </div>
-      <div class="col s12 m6">
-        <div class="card">
-          <div class="card-content">
-            <span class="card-title">Online Counseling</span>
-            <p>Accessible virtual sessions that bring mental health care to your home.</p>
+          <div class="card-action">
+            <a href="#intake-form" class="waves-effect waves-light teal-text">Book Now</a>
           </div>
         </div>
       </div>
       <div class="col s12 m6">
-        <div class="card">
+        <div class="card service-card hoverable">
           <div class="card-content">
-            <span class="card-title">Workshops</span>
-            <p>Interactive workshops covering topics like stress management and mindfulness.</p>
+            <span class="card-title"><i class="card-icon fas fa-balance-scale"></i> Workshops</span>
+            <p>Interactive workshops focusing on mental health and wellness.</p>
+          </div>
+          <div class="card-action">
+            <a href="#intake-form" class="waves-effect waves-light teal-text">Book Now</a>
           </div>
         </div>
       </div>
@@ -120,70 +188,84 @@
   </section>
 
   <!-- Team Section -->
-  <section id="team" class="team-section section container">
+  <section id="team" class="section container">
     <h4 class="center-align">Meet Our Team</h4>
     <div class="row">
       <div class="col s12 m4">
         <div class="team-member">
-          <img src="https://via.placeholder.com/150" alt="Pranjal Vyaas, Founder" class="circle responsive-img">
+          <img src="https://via.placeholder.com/150" alt="Pranjal Vyaas, Founder" loading="lazy">
           <h5 class="team-name">Pranjal Vyaas</h5>
           <p class="team-role">Founder</p>
+          <p class="team-description">Pranjal combines modern psychology with Vedic practices for holistic healing.</p>
         </div>
       </div>
       <div class="col s12 m4">
         <div class="team-member">
-          <img src="https://via.placeholder.com/150" alt="Vasundhra Rangra, COO" class="circle responsive-img">
+          <img src="https://via.placeholder.com/150" alt="Vasundhra Rangra, COO" loading="lazy">
           <h5 class="team-name">Vasundhra Rangra</h5>
           <p class="team-role">COO</p>
+          <p class="team-description">Vasundhra ensures smooth operations and client satisfaction.</p>
         </div>
       </div>
       <div class="col s12 m4">
         <div class="team-member">
-          <img src="https://via.placeholder.com/150" alt="Vigya Saxena, Head of Social Media" class="circle responsive-img">
+          <img src="https://via.placeholder.com/150" alt="Vigya Saxena, Head of Social Media" loading="lazy">
           <h5 class="team-name">Vigya Saxena</h5>
-          <p class="team-role">Head Social Media</p>
+          <p class="team-role">Head of Social Media</p>
+          <p class="team-description">Vigya manages outreach and community engagement through innovative strategies.</p>
         </div>
       </div>
       <div class="col s12 m4">
         <div class="team-member">
-          <img src="https://via.placeholder.com/150" alt="Jenny Macwan, Psychologist" class="circle responsive-img">
+          <img src="https://via.placeholder.com/150" alt="Jenny Macwan, Psychologist" loading="lazy">
           <h5 class="team-name">Jenny Macwan</h5>
           <p class="team-role">Psychologist</p>
+          <p class="team-description">Jenny specializes in evidence-based therapeutic approaches for mental wellness.</p>
         </div>
       </div>
     </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="section container">
+    <h4 class="center-align">Blog Coming Soon!</h4>
+    <p class="coming-soon">Stay tuned for articles on mental health and wellness.<br>Subscribe to our newsletter for updates!</p>
+    <a href="#!" class="btn waves-effect waves-light teal">Subscribe</a>
   </section>
 
   <!-- Intake Form Section -->
   <section id="intake-form" class="section container">
     <h4 class="center-align">Client Intake Form</h4>
     <div class="row">
-      <form action="https://docs.google.com/forms/d/e/AKfycbxIG2r3va9ah9XFKdO0ZEOgk_tpM6HjFVLVPK0NEC_D/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
-        <div class="input-field col s12">
-          <input id="name" type="text" name="entry.1234567890" required>
-          <label for="name">Name</label>
-        </div>
+      <form action="https://docs.google.com/forms/d/e/AKfycbxIG2r3va9ah9XFKdO0ZEOgk_tpM6HjFVLVPK0NEC_D/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true; showSuccessMessage();">
+        <div class="form-container col s12">
+          <div class="input-field">
+            <input id="name" type="text" name="entry.1234567890" required>
+            <label for="name">Name</label>
+          </div>
 
-        <div class="input-field col s12">
-          <input id="email" type="email" name="entry.0987654321" required>
-          <label for="email">Email</label>
-        </div>
+          <div class="input-field">
+            <input id="email" type="email" name="entry.0987654321" required>
+            <label for="email">Email</label>
+          </div>
 
-        <div class="input-field col s12">
-          <input id="phone" type="tel" name="entry.1122334455" required>
-          <label for="phone">Phone Number</label>
-        </div>
+          <div class="input-field">
+            <input id="phone" type="tel" name="entry.1122334455" required pattern="[0-9]{10}" title="Please enter a valid phone number.">
+            <label for="phone">Phone Number</label>
+          </div>
 
-        <div class="input-field col s12">
-          <textarea id="message" class="materialize-textarea" name="entry.5566778899" required></textarea>
-          <label for="message">Message</label>
-        </div>
+          <div class="input-field">
+            <textarea id="message" class="materialize-textarea" name="entry.5566778899" required></textarea>
+            <label for="message">Message</label>
+          </div>
 
-        <div class="center">
-          <button type="submit" class="btn waves-effect waves-light teal">Submit</button>
-        </div>
+          <div class="center">
+            <button type="submit" class="btn waves-effect waves-light teal">Submit</button>
+          </div>
+          <p class="success-message" id="success-message">Thank you! Your submission has been received.</p>
 
-        <iframe name="hidden_iframe" style="display:none;"></iframe>
+          <iframe name="hidden_iframe" style="display:none;"></iframe>
+        </div>
       </form>
     </div>
   </section>
@@ -198,7 +280,7 @@
         </a>
       </div>
       <div class="col s3">
-        <a href="https://x.com/manovedaorg" target="_blank" aria-label="X (Twitter)">
+        <a href="https://x.com/manovedaorg" target="_blank" aria-label="Twitter">
           <i class="fab fa-twitter fa-3x teal-text"></i>
         </a>
       </div>
@@ -229,36 +311,46 @@
   <script>
     var submitted = false;
 
-    // Optional: Handle successful form submission message
-    function checkSubmission() {
-      if (submitted) {
-        M.toast({html: "Thank you! Your submission has been received.", classes: 'green'});
-      }
+    function showSuccessMessage() {
+      document.getElementById('success-message').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('success-message').style.display = 'none';
+      }, 5000);
     }
 
-    // Event listener for scroll to highlight active nav link
-    window.addEventListener('scroll', () => {
-      const sections = document.querySelectorAll('section');
-      const navLinks = document.querySelectorAll('nav a');
-      let current = '';
+    // Toggle Dark Mode
+    document.getElementById('dark-mode-toggle').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
 
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
+    // Initialize tooltips
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.tooltipped');
+      var instances = M.Tooltip.init(elems);
+    });
 
-        if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
-          current = section.getAttribute('id');
-        }
-      });
+    // Initialize mobile sidenav
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems);
+    });
 
-      navLinks.forEach(link => {
-        link.classList.remove('active-link');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active-link');
-        }
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
       });
     });
+
+    // AOS Initialization
+    AOS.init();
   </script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
 </body>
 </html>
+
