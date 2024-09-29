@@ -31,14 +31,32 @@
       background-color: #01003C;
       color: white;
     }
-    .team-section img {
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
+    .team-section {
+      margin-top: 40px;
     }
     .team-member {
       text-align: center;
       padding: 20px;
+      transition: transform 0.3s;
+    }
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+    .team-member img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+    }
+    .team-name {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .team-role {
+      font-style: italic;
+      color: #777;
+    }
+    .team-description {
+      margin-top: 10px;
     }
     .success-message, .error-message {
       text-align: center;
@@ -274,7 +292,7 @@
       document.getElementById('success-message').style.display = 'none';
       document.getElementById('error-message').style.display = 'none';
     }
-    
+
     // Show success message
     function showSuccessMessage() {
       document.getElementById('success-message').style.display = 'block';
@@ -284,4 +302,3 @@
 
 </body>
 </html>
-
