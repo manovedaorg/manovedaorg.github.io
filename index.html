@@ -88,6 +88,7 @@
           <li><a href="#team" class="white-text">Team</a></li>
           <li><a href="#contact" class="white-text">Connect with Us</a></li>
           <li><a href="#intake-form" class="white-text">Intake Form</a></li>
+          <li><a href="#gate-course" class="white-text modal-trigger" data-target="gate-modal">GATE Psychology Course</a></li>
         </ul>
       </div>
     </nav>
@@ -164,10 +165,10 @@
         </div>
         <div class="col s12 m4">
           <div class="team-member">
-            <img src="https://via.placeholder.com/150" alt="Vasundhra Rangra, COO" loading="lazy">
+            <img src="https://via.placeholder.com/150" alt="Vasundhra Rangra, Lead Psychologist" loading="lazy">
             <h5 class="team-name">Vasundhra Rangra</h5>
-            <p class="team-role">COO</p>
-            <p class="team-description">Vasundhra ensures smooth operations and client satisfaction.</p>
+            <p class="team-role">Lead Psychologist</p>
+            <p class="team-description">Vasundhra ensures effective operations and service quality.</p>
           </div>
         </div>
         <div class="col s12 m4">
@@ -180,15 +181,15 @@
         </div>
         <div class="col s12 m4">
           <div class="team-member">
-            <img src="https://via.placeholder.com/150" alt="Jenny Macwan, Psychologist" loading="lazy">
-            <h5 class="team-name">Jenny Macwan</h5>
-            <p class="team-role">Psychologist</p>
-            <p class="team-description">Jenny specializes in evidence-based therapeutic approaches for mental wellness.</p>
+            <img src="https://via.placeholder.com/150" alt="Vanika Gupta, Social Media Intern" loading="lazy">
+            <h5 class="team-name">Vanika Gupta</h5>
+            <p class="team-role">Social Media Intern</p>
+            <p class="team-description">Vanika supports social media initiatives and content creation.</p>
           </div>
         </div>
         <div class="col s12 m4">
           <div class="team-member">
-            <img src="https://via.placeholder.com/150" alt="Sonali S, Hon Advisor Legal Matter Expert" loading="lazy">
+            <img src="https://via.placeholder.com/150" alt="Adv Sonali Satpathy, Hon Advisor Legal Matter Expert" loading="lazy">
             <h5 class="team-name">Adv Sonali Satpathy</h5>
             <p class="team-role">Hon Advisor Legal Matter Expert</p>
             <p class="team-description">Sonali provides expert legal guidance, ensuring compliance and protection of client rights.</p>
@@ -197,18 +198,11 @@
       </div>
     </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="section container">
-      <h4 class="center-align">Blog Coming Soon!</h4>
-      <p class="coming-soon">Stay tuned for articles on mental health and wellness.<br>Subscribe to our newsletter for updates!</p>
-      <a href="#!" class="btn waves-effect waves-light">Subscribe</a>
-    </section>
-
-    <!-- Intake Form Section -->
+    <!-- Client Intake Form Section -->
     <section id="intake-form" class="section container">
       <h4 class="center-align">Client Intake Form</h4>
       <div class="row">
-        <form action="https://docs.google.com/forms/d/e/AKfycbxIG2r3va9ah9XFKdO0ZEOgk_tpM6HjFVLVPK0NEC_D/formResponse" method="POST" target="hidden_iframe" onsubmit="showLoadingIndicator();">
+        <form action="https://docs.google.com/forms/d/e/AKfycbxIG2r3va9ah9XFKdO0ZEOgk_tpM6HjFVLVPK0NEC_D/formResponse" method="POST" target="hidden_iframe">
           <div class="input-field col s12">
             <input id="name" type="text" name="entry.1234567890" required>
             <label for="name">Name</label>
@@ -273,6 +267,18 @@
         </div>
       </div>
     </section>
+
+    <!-- GATE Psychology Course Modal -->
+    <div id="gate-modal" class="modal">
+      <div class="modal-content">
+        <h4>Enroll in GATE Psychology Course</h4>
+        <p>Join our comprehensive GATE Psychology Course designed to equip you with the knowledge and skills necessary to excel in your psychology career. Enroll now to take your first step towards success!</p>
+        <a href="#!" class="btn waves-effect waves-light">Enroll Now</a>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      </div>
+    </div>
   </main>
 
   <!-- Footer -->
@@ -286,7 +292,18 @@
     </div>
   </footer>
 
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems);
+      
+      // Automatically open the modal on page load
+      var modalInstance = M.Modal.getInstance(elems[0]);
+      modalInstance.open();
+    });
+
     function showLoadingIndicator() {
       document.getElementById('loading-indicator').style.display = 'block';
       document.getElementById('success-message').style.display = 'none';
