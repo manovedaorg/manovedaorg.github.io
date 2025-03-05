@@ -10,180 +10,103 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Materialize CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-  <!-- AOS (Animate On Scroll) for smooth scroll animations -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    /* General Styles */
     body {
       background-color: #ffffff;
       color: #01003C;
-      font-family: 'Roboto', sans-serif;
+      font-family: Arial, sans-serif;
       line-height: 1.6;
     }
 
-    /* Hero Section */
-    .hero-section {
-      background-image: url('path-to-your-image.jpg'); /* Background image */
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 120px 0;
-      text-align: center;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .hero-section h1 {
-      font-size: 3em;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .hero-section p {
-      font-size: 1.2em;
-    }
-
-    .btn-large {
-      border-radius: 30px;
-      padding: 15px 40px;
-      background: linear-gradient(45deg, #00B4D8, #00A3B6);
-      color: white;
-      transition: box-shadow 0.3s, transform 0.3s;
-    }
-
-    .btn-large:hover {
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transform: scale(1.05);
-    }
-
-    /* Navigation */
+    /* Navigation bar */
     .nav-wrapper {
       background-color: #01003C;
     }
 
-    .nav-wrapper a {
+    /* Hero Section with Gradient */
+    .hero-section {
+      padding: 100px 0;
+      background: linear-gradient(to right, #01003C, #970836); /* Gradient of Blue to Red */
       color: white;
-    }
-
-    /* Cards for Services */
-    .card {
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-    }
-
-    .card-title {
-      font-family: 'Lora', serif;
-      font-weight: 700;
-    }
-
-    /* Team Section */
-    .team-member {
-      border-radius: 15px;
-      overflow: hidden;
-      margin: 15px;
-      background-color: #f8f8f8;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .team-member:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    .team-member img {
-      width: 100%;
-      height: auto;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .team-member:hover img {
-      transform: scale(1.1);
-    }
-
-    .team-name {
-      font-size: 1.3em;
-      font-weight: 600;
-    }
-
-    .team-role {
-      color: #555;
-      font-style: italic;
-      margin-bottom: 15px;
-    }
-
-    /* Intake Form */
-    .input-field input,
-    .input-field textarea {
-      padding: 15px;
-      font-size: 1em;
-      border-radius: 10px;
-    }
-
-    input[type="submit"] {
-      background-color: #00B4D8;
-      color: white;
-      border-radius: 25px;
-      padding: 12px 30px;
-      font-weight: bold;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #009FB1;
-      cursor: pointer;
-    }
-
-    /* Social Media Icons */
-    .social-icon {
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
-
-    .social-icon:hover {
-      transform: scale(1.1);
-      color: #00B4D8;
-    }
-
-    /* Footer */
-    .page-footer {
-      background-color: #01003C;
-      color: white;
-      padding: 40px 0;
-    }
-
-    .page-footer .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .page-footer p {
-      font-size: 0.9em;
       text-align: center;
     }
 
-    .page-footer a {
-      color: #fff;
-      text-decoration: none;
+    /* Footer with Gradient */
+    .page-footer {
+      padding: 20px 0;
+      background: linear-gradient(to right, #01003C, #004d72); /* Gradient of Blue to a darker shade of blue */
+      color: white;
     }
 
-    .page-footer a:hover {
-      text-decoration: underline;
+    /* About Us Section */
+    #about {
+      background: linear-gradient(to bottom, #f4f7fb, #01003C); /* Lighter gradient background */
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .team-member {
-        margin: 10px;
-      }
-
-      .hero-section h1 {
-        font-size: 2.2em;
-      }
+    /* Services Section */
+    #services {
+      background: linear-gradient(to bottom, #f7f7f7, #e8e8e8);
     }
+
+    /* Team Section */
+    .team-section {
+      margin-top: 40px;
+      background: linear-gradient(to right, #009688, #970836); /* Gradient of Teal to Red */
+    }
+
+    /* Team Member Hover Effect */
+    .team-member {
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+    .team-member:hover {
+      transform: translateY(-5px);
+    }
+    .team-member img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+    }
+
+    .team-name {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .team-role {
+      font-style: italic;
+      color: #777;
+    }
+
+    .team-description {
+      margin-top: 10px;
+    }
+
+    .success-message, .error-message {
+      text-align: center;
+    }
+
+    .loading-indicator {
+      display: none;
+      text-align: center;
+    }
+
+    .coming-soon {
+      font-size: 1.2em;
+      text-align: center;
+    }
+
+    /* Intake Form Section */
+    #intake-form {
+      background: linear-gradient(to right, #009688, #970836); /* Gradient of Teal to Red */
+    }
+
+    /* Connect with Us Section */
+    #contact {
+      background: linear-gradient(to top, #01003C, #004d72); /* Gradient of Blue to a darker shade */
+    }
+
   </style>
 </head>
 <body>
@@ -221,13 +144,13 @@
     </section>
 
     <!-- About Us Section -->
-    <section id="about" class="section container" data-aos="fade-up">
+    <section id="about" class="section container">
       <h4 class="center-align">About Us</h4>
       <p>We provide holistic mental health care that blends modern psychology and ancient Vedic wisdom. Our mission is to offer personalized treatment that fosters emotional resilience and well-being for the long term.</p>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="section container" data-aos="fade-up">
+    <section id="services" class="section container">
       <h4 class="center-align">Our Services</h4>
       <div class="row">
         <div class="col s12 m6">
@@ -266,23 +189,70 @@
     </section>
 
     <!-- Team Section -->
-    <section id="team" class="team-section section container" data-aos="fade-up">
+    <section id="team" class="team-section section container">
       <h4 class="center-align">Meet Our Team</h4>
       <div class="row">
         <div class="col s12 m4">
           <div class="team-member">
-            <img src="https://via.placeholder.com/150" alt="Pranjal Vyas, Founder">
+            <img src="https://via.placeholder.com/150" alt="Pranjal Vyas, Founder" loading="lazy">
             <h5 class="team-name">Pranjal Vyas</h5>
             <p class="team-role">Founder</p>
             <p class="team-description">Pranjal leads our vision with a commitment to holistic mental wellness.</p>
           </div>
         </div>
-        <!-- Repeat for other team members -->
+        <div class="col s12 m4">
+          <div class="team-member">
+            <img src="https://via.placeholder.com/150" alt="Harshita Rai, Co-Founder / COO" loading="lazy">
+            <h5 class="team-name">Harshita Rai</h5>
+            <p class="team-role">Co-Founder / COO</p>
+            <p class="team-description">Harshita plays a key role in overseeing the operations and strategic direction of the organization.</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="team-member">
+            <img src="https://via.placeholder.com/150" alt="Aastha Prahladka, Counselling Psychologist" loading="lazy">
+            <h5 class="team-name">Aastha Prahladka</h5>
+            <p class="team-role">Counselling Psychologist (PRO BONO)</p>
+            <p class="team-description">Aastha is leading the PRO BONO division, providing mental health support to underserved communities.</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="team-member">
+            <img src="https://via.placeholder.com/150" alt="Vasundhra Rangra, Lead Psychologist" loading="lazy">
+            <h5 class="team-name">Vasundhra Rangra</h5>
+            <p class="team-role">Lead Psychologist</p>
+            <p class="team-description">Vasundhra ensures effective operations and service quality.</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="team-member">
+            <img src="https://via.placeholder.com/150" alt="Vigya Saxena, Head of Social Media" loading="lazy">
+            <h5 class="team-name">Vigya Saxena</h5>
+            <p class="team-role">Head of Social Media</p>
+            <p class="team-description">Vigya manages outreach and community engagement through innovative strategies.</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="team-member">
+            <img src="https://via.placeholder.com/150" alt="Adv Sonali Satpathy, Hon Advisor Legal Matter Expert" loading="lazy">
+            <h5 class="team-name">Adv Sonali Satpathy</h5>
+            <p class="team-role">Hon Advisor Legal Matter Expert</p>
+            <p class="team-description">Sonali provides expert legal guidance, ensuring compliance and protection of client rights.</p>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="team-member">
+            <img src="https://via.placeholder.com/150" alt="Shailja Modi, Psychologist" loading="lazy">
+            <h5 class="team-name">Shailja Modi</h5>
+            <p class="team-role">Psychologist</p>
+            <p class="team-description">Shailja specializes in providing psychological support, guidance, and interventions that promote emotional well-being and resilience.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Client Intake Form Section -->
-    <section id="intake-form" class="section container" data-aos="fade-up">
+    <section id="intake-form" class="section container">
       <h4 class="center-align">Client Intake Form</h4>
       <div class="row">
         <form action="https://docs.google.com/forms/d/e/AKfycbxIG2r3va9ah9XFKdO0ZEOgk_tpM6HjFVLVPK0NEC_D/formResponse" method="POST" target="hidden_iframe">
@@ -290,55 +260,76 @@
             <input id="name" type="text" name="entry.1234567890" required>
             <label for="name">Name</label>
           </div>
+
           <div class="input-field col s12">
             <input id="email" type="email" name="entry.0987654321" required>
             <label for="email">Email</label>
           </div>
+
           <div class="input-field col s12">
             <input id="phone" type="tel" name="entry.1122334455" required pattern="[0-9]{10}" title="Please enter a valid phone number.">
             <label for="phone">Phone Number</label>
           </div>
+
           <div class="input-field col s12">
             <textarea id="message" class="materialize-textarea" name="entry.5566778899" required></textarea>
             <label for="message">Message</label>
           </div>
-          <div class="col s12">
-            <input type="submit" class="btn-large waves-effect waves-light white teal-text" value="Submit">
+
+          <div class="center">
+            <button type="submit" class="btn waves-effect waves-light">Submit</button>
           </div>
+          <p class="success-message" id="success-message" style="display:none;">Thank you! Your submission has been received.</p>
+          <p class="error-message" id="error-message" style="display:none;"></p>
+          <div class="loading-indicator" id="loading-indicator">Submitting...</div>
+          <iframe name="hidden_iframe" style="display:none;"></iframe>
         </form>
+      </div>
+    </section>
+
+    <!-- Connect with Us Section -->
+    <section id="contact" class="section container">
+      <h4 class="center-align">Connect with Us</h4>
+      <div class="row center">
+        <!-- Facebook -->
+        <div class="col s3">
+          <a href="https://www.facebook.com/manovedaorg" target="_blank" class="social-icon" aria-label="Facebook">
+            <i class="fab fa-facebook-f fa-3x teal-text"></i>
+          </a>
+        </div>
+
+        <!-- Twitter -->
+        <div class="col s3">
+          <a href="https://x.com/manovedaorg" target="_blank" class="social-icon" aria-label="Twitter">
+            <i class="fab fa-twitter fa-3x teal-text"></i>
+          </a>
+        </div>
+
+        <!-- Instagram -->
+        <div class="col s3">
+          <a href="https://www.instagram.com/manoveda_org/" target="_blank" class="social-icon" aria-label="Instagram">
+            <i class="fab fa-instagram fa-3x teal-text"></i>
+          </a>
+        </div>
+
+        <!-- LinkedIn -->
+        <div class="col s3">
+          <a href="https://www.linkedin.com/company/manovedaorg" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in fa-3x teal-text"></i>
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
   <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col s12 m6">
-          <h5 class="white-text">Manoveda Wellness Hub</h5>
-          <p class="grey-text text-lighten-4">Integrating modern psychology with Vedic wisdom for emotional well-being.</p>
-        </div>
-        <div class="col s12 m6">
-          <ul>
-            <li><a href="#!" class="white-text">Privacy Policy</a></li>
-            <li><a href="#!" class="white-text">Terms of Service</a></li>
-            <li><a href="#!" class="white-text">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        © 2025 Manoveda Wellness Hub | All Rights Reserved
-      </div>
+    <div class="container center">
+      <p>&copy; 2025 Manoveda Wellness Hub | All Rights Reserved</p>
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Materialize JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init(); // Initialize animations
-  </script>
 </body>
 </html>
