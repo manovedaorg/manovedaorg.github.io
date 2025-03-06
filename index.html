@@ -6,108 +6,9 @@
   <meta name="description" content="Holistic mental health services integrating modern psychology and Vedic wisdom.">
   <meta name="keywords" content="Mental Health, Holistic Care, Therapy, Counseling">
   <title>Manoveda Wellness Hub</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #ffffff;
-      color: #01003C;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
-
-    /* Navigation bar */
-    .nav-wrapper {
-      background-color: #01003C;
-    }
-
-    /* Hero Section with Gradient */
-    .hero-section {
-      padding: 100px 0;
-      background: linear-gradient(to right, #01003C, #970836); /* Gradient of Blue to Red */
-      color: white;
-      text-align: center;
-    }
-
-    /* Footer with Gradient */
-    .page-footer {
-      padding: 20px 0;
-      background: linear-gradient(to right, #01003C, #004d72); /* Gradient of Blue to a darker shade of blue */
-      color: white;
-    }
-
-    /* About Us Section */
-    #about {
-      background: linear-gradient(to bottom, #f4f7fb, #01003C); /* Lighter gradient background */
-    }
-
-    /* Services Section */
-    #services {
-      background: linear-gradient(to bottom, #f7f7f7, #e8e8e8);
-    }
-
-    /* Team Section */
-    .team-section {
-      margin-top: 40px;
-      background: linear-gradient(to right, #009688, #970836); /* Gradient of Teal to Red */
-    }
-
-    /* Team Member Hover Effect */
-    .team-member {
-      text-align: center;
-      padding: 20px;
-      transition: transform 0.3s;
-    }
-    .team-member:hover {
-      transform: translateY(-5px);
-    }
-    .team-member img {
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-    }
-
-    .team-name {
-      font-weight: bold;
-      margin-top: 10px;
-    }
-
-    .team-role {
-      font-style: italic;
-      color: #777;
-    }
-
-    .team-description {
-      margin-top: 10px;
-    }
-
-    .success-message, .error-message {
-      text-align: center;
-    }
-
-    .loading-indicator {
-      display: none;
-      text-align: center;
-    }
-
-    .coming-soon {
-      font-size: 1.2em;
-      text-align: center;
-    }
-
-    /* Intake Form Section */
-    #intake-form {
-      background: linear-gradient(to right, #009688, #970836); /* Gradient of Teal to Red */
-    }
-
-    /* Connect with Us Section */
-    #contact {
-      background: linear-gradient(to top, #01003C, #004d72); /* Gradient of Blue to a darker shade */
-    }
-
-  </style>
 </head>
 <body>
 
@@ -125,7 +26,6 @@
           <li><a href="#services" class="white-text">Services</a></li>
           <li><a href="#team" class="white-text">Team</a></li>
           <li><a href="#contact" class="white-text">Connect with Us</a></li>
-          <li><a href="#intake-form" class="white-text">Intake Form</a></li>
         </ul>
       </div>
     </nav>
@@ -153,6 +53,7 @@
     <section id="services" class="section container">
       <h4 class="center-align">Our Services</h4>
       <div class="row">
+        <!-- Service Cards -->
         <div class="col s12 m6">
           <div class="card">
             <div class="card-content">
@@ -169,22 +70,6 @@
             </div>
           </div>
         </div>
-        <div class="col s12 m6">
-          <div class="card">
-            <div class="card-content">
-              <span class="card-title">Online Counseling</span>
-              <p>Accessible virtual sessions that bring mental health care to your home.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m6">
-          <div class="card">
-            <div class="card-content">
-              <span class="card-title">Workshops</span>
-              <p>Interactive workshops covering topics like stress management and mindfulness.</p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -192,98 +77,75 @@
     <section id="team" class="team-section section container">
       <h4 class="center-align">Meet Our Team</h4>
       <div class="row">
+        <!-- Team Member 1 -->
         <div class="col s12 m4">
           <div class="team-member">
-            <img src="https://via.placeholder.com/150" alt="Pranjal Vyas, Founder" loading="lazy">
+            <img src="images/pranjal-vyas.jpg" alt="Pranjal Vyas, Founder" loading="lazy">
             <h5 class="team-name">Pranjal Vyas</h5>
             <p class="team-role">Founder</p>
-            <p class="team-description">Pranjal leads our vision with a commitment to holistic mental wellness.</p>
+            <p class="team-description">Pranjal leads our vision with a commitment to holistic mental wellness and integrates both modern psychological methods and ancient Vedic wisdom to help clients achieve emotional balance.</p>
           </div>
         </div>
+
+        <!-- Team Member 2 -->
         <div class="col s12 m4">
           <div class="team-member">
-            <img src="https://via.placeholder.com/150" alt="Harshita Rai, Co-Founder / COO" loading="lazy">
+            <img src="images/harshita-rai.jpg" alt="Harshita Rai, Co-Founder / COO" loading="lazy">
             <h5 class="team-name">Harshita Rai</h5>
             <p class="team-role">Co-Founder / COO</p>
-            <p class="team-description">Harshita plays a key role in overseeing the operations and strategic direction of the organization.</p>
+            <p class="team-description">Harshita oversees the operations and strategic direction of the organization, ensuring the smooth running of services and maintaining a high standard of care for all clients.</p>
           </div>
         </div>
+
+        <!-- Team Member 3 -->
         <div class="col s12 m4">
           <div class="team-member">
-            <img src="https://via.placeholder.com/150" alt="Aastha Prahladka, Counselling Psychologist" loading="lazy">
+            <img src="images/aastha-prahladka.jpg" alt="Aastha Prahladka, Counselling Psychologist (Pro Bono)" loading="lazy">
             <h5 class="team-name">Aastha Prahladka</h5>
             <p class="team-role">Counselling Psychologist (PRO BONO)</p>
-            <p class="team-description">Aastha is leading the PRO BONO division, providing mental health support to underserved communities.</p>
+            <p class="team-description">Aastha leads our PRO BONO division, offering mental health support to underserved communities. She is passionate about making therapy accessible to all.</p>
           </div>
         </div>
+
+        <!-- Team Member 4 -->
         <div class="col s12 m4">
           <div class="team-member">
-            <img src="https://via.placeholder.com/150" alt="Vasundhra Rangra, Lead Psychologist" loading="lazy">
+            <img src="images/vasundhra-rangra.jpg" alt="Vasundhra Rangra, Lead Psychologist" loading="lazy">
             <h5 class="team-name">Vasundhra Rangra</h5>
             <p class="team-role">Lead Psychologist</p>
-            <p class="team-description">Vasundhra ensures effective operations and service quality.</p>
+            <p class="team-description">Vasundhra ensures effective operations and service quality, overseeing the team of therapists and ensuring client well-being is at the forefront of everything we do.</p>
           </div>
         </div>
+
+        <!-- Team Member 5 -->
         <div class="col s12 m4">
           <div class="team-member">
-            <img src="https://via.placeholder.com/150" alt="Vigya Saxena, Head of Social Media" loading="lazy">
+            <img src="images/vigya-saxena.jpg" alt="Vigya Saxena, Head of Social Media" loading="lazy">
             <h5 class="team-name">Vigya Saxena</h5>
             <p class="team-role">Head of Social Media</p>
-            <p class="team-description">Vigya manages outreach and community engagement through innovative strategies.</p>
+            <p class="team-description">Vigya manages outreach and community engagement through innovative strategies, ensuring that Manoveda's message of wellness and healing reaches those in need.</p>
           </div>
         </div>
+
+        <!-- Team Member 6 -->
         <div class="col s12 m4">
           <div class="team-member">
-            <img src="https://via.placeholder.com/150" alt="Adv Sonali Satpathy, Hon Advisor Legal Matter Expert" loading="lazy">
+            <img src="images/sonali-satpathy.jpg" alt="Adv Sonali Satpathy, Hon Advisor Legal Matter Expert" loading="lazy">
             <h5 class="team-name">Adv Sonali Satpathy</h5>
             <p class="team-role">Hon Advisor Legal Matter Expert</p>
-            <p class="team-description">Sonali provides expert legal guidance, ensuring compliance and protection of client rights.</p>
+            <p class="team-description">Sonali provides expert legal guidance, ensuring compliance and protection of client rights. She helps navigate the complexities of mental health law.</p>
           </div>
         </div>
+
+        <!-- Team Member 7 -->
         <div class="col s12 m4">
           <div class="team-member">
-            <img src="https://via.placeholder.com/150" alt="Shailja Modi, Psychologist" loading="lazy">
+            <img src="images/shailja-modi.jpg" alt="Shailja Modi, Psychologist" loading="lazy">
             <h5 class="team-name">Shailja Modi</h5>
             <p class="team-role">Psychologist</p>
-            <p class="team-description">Shailja specializes in providing psychological support, guidance, and interventions that promote emotional well-being and resilience.</p>
+            <p class="team-description">Shailja specializes in providing psychological support, guidance, and interventions that promote emotional well-being and resilience. She has a deep understanding of human behavior and mental health challenges.</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Client Intake Form Section -->
-    <section id="intake-form" class="section container">
-      <h4 class="center-align">Client Intake Form</h4>
-      <div class="row">
-        <form action="https://docs.google.com/forms/d/e/AKfycbxIG2r3va9ah9XFKdO0ZEOgk_tpM6HjFVLVPK0NEC_D/formResponse" method="POST" target="hidden_iframe">
-          <div class="input-field col s12">
-            <input id="name" type="text" name="entry.1234567890" required>
-            <label for="name">Name</label>
-          </div>
-
-          <div class="input-field col s12">
-            <input id="email" type="email" name="entry.0987654321" required>
-            <label for="email">Email</label>
-          </div>
-
-          <div class="input-field col s12">
-            <input id="phone" type="tel" name="entry.1122334455" required pattern="[0-9]{10}" title="Please enter a valid phone number.">
-            <label for="phone">Phone Number</label>
-          </div>
-
-          <div class="input-field col s12">
-            <textarea id="message" class="materialize-textarea" name="entry.5566778899" required></textarea>
-            <label for="message">Message</label>
-          </div>
-
-          <div class="center">
-            <button type="submit" class="btn waves-effect waves-light">Submit</button>
-          </div>
-          <p class="success-message" id="success-message" style="display:none;">Thank you! Your submission has been received.</p>
-          <p class="error-message" id="error-message" style="display:none;"></p>
-          <div class="loading-indicator" id="loading-indicator">Submitting...</div>
-          <iframe name="hidden_iframe" style="display:none;"></iframe>
-        </form>
       </div>
     </section>
 
@@ -293,29 +155,14 @@
       <div class="row center">
         <!-- Facebook -->
         <div class="col s3">
-          <a href="https://www.facebook.com/manovedaorg" target="_blank" class="social-icon" aria-label="Facebook">
+          <a href="https://www.facebook.com/yourpage" target="_blank" class="social-icon" aria-label="Facebook">
             <i class="fab fa-facebook-f fa-3x teal-text"></i>
           </a>
         </div>
-
         <!-- Twitter -->
         <div class="col s3">
-          <a href="https://x.com/manovedaorg" target="_blank" class="social-icon" aria-label="Twitter">
+          <a href="https://twitter.com/yourhandle" target="_blank" class="social-icon" aria-label="Twitter">
             <i class="fab fa-twitter fa-3x teal-text"></i>
-          </a>
-        </div>
-
-        <!-- Instagram -->
-        <div class="col s3">
-          <a href="https://www.instagram.com/manoveda_org/" target="_blank" class="social-icon" aria-label="Instagram">
-            <i class="fab fa-instagram fa-3x teal-text"></i>
-          </a>
-        </div>
-
-        <!-- LinkedIn -->
-        <div class="col s3">
-          <a href="https://www.linkedin.com/company/manovedaorg" target="_blank" class="social-icon" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in fa-3x teal-text"></i>
           </a>
         </div>
       </div>
@@ -329,7 +176,7 @@
     </div>
   </footer>
 
-  <!-- Materialize JS -->
+  <script src="scripts.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>
