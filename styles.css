@@ -1,0 +1,58 @@
+body {
+  background-color: #ffffff;
+  color: #01003C;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+.nav-wrapper {
+  background-color: #01003C;
+}
+.hero-section {
+  padding: 100px 0;
+  background-color: #970836;
+  color: white;
+  text-align: center;
+}
+.page-footer {
+  padding: 20px 0;
+  background-color: #01003C;
+  color: white;
+}
+.team-section {
+  margin-top: 40px;
+}
+.team-member {
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+.team-member:hover {
+  transform: translateY(-5px);
+}
+.team-member img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+.team-name {
+  font-weight: bold;
+  margin-top: 10px;
+}
+.team-role {
+  font-style: italic;
+  color: #777;
+}
+.team-description {
+  margin-top: 10px;
+}
+.success-message, .error-message {
+  text-align: center;
+}
+.loading-indicator {
+  display: none;
+  text-align: center;
+}
+.coming-soon {
+  font-size: 1.2em;
+  text-align: center;
+}
