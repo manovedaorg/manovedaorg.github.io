@@ -1,68 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Holistic mental health services integrating modern psychology and Vedic wisdom.">
-  <meta name="keywords" content="Mental Health, Holistic Care, Therapy, Counseling">
+  <meta name="description" content="Holistic mental health blending Vedic wisdom and modern psychology.">
+  <meta name="keywords" content="Mental Health, Vedic Wisdom, Therapy, Counseling">
+  <meta property="og:title" content="Manoveda Wellness Hub">
+  <meta property="og:description" content="Holistic mental health blending Vedic wisdom and modern psychology.">
+  <meta property="og:image" content="https://instagram.famd4-1.fna.fbcdn.net/v/t51.29350-15/461173678_502151266014502_7727925301373072396_n.webp?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjEwODB4MTA4MC5zZHIuZjI5MzUwLmRlZmF1bHRfaW1hZ2UifQ&_nc_ht=instagram.famd4-1.fna.fbcdn.net&_nc_cat=110&_nc_oc=Q6cZ2QEImbsy_fadJXDQzTeRKMZds9jo5dfZC0sTHahujM6bzMkJFkbjHHBqbSrbDQGiDlSE8iVhL3MDmEMtc9bvAQbq&_nc_ohc=91UKMl7MnfIQ7kNvwHZUppT&_nc_gid=XsGdH8er5mw6ba-BiOBWeg&edm=AP4sbd4BAAAA&ccb=7-5&ig_cache_key=MzQ2MjY1Njk4NDQxNDExMjQ1OQ%3D%3D.3-ccb7-5&oh=00_AfIsxYfTYx6xm26Y4bJAyA8TlJSzLuq8apYsyV_EJVl0AA&oe=682CBDA3&_nc_sid=7a9f4b">
+  <meta name="twitter:card" content="summary_large_image">
   <title>Manoveda Wellness Hub</title>
-  <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Materialize CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
-  <!-- Your custom CSS file -->
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { font-family: 'Open Sans', sans-serif; color: #3A3F5E; background: #F5F5F7; }
+    h1, h4, h5 { font-family: 'Lora', serif; color: #3A3F5E; }
+    .skip-link { position: absolute; top: -40px; left: 0; background: #3A3F5E; color: #F5F5F7; padding: 8px; z-index: 100; }
+    .skip-link:focus { top: 0; }
+    .nav-wrapper { background: #AFA3D8; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .brand-logo img { height: 40px; vertical-align: middle; }
+    .nav-wrapper a { font-family: 'Lora', serif; color: #3A3F5E; font-size: 1.1rem; }
+    .hero-section {
+      background: linear-gradient(rgba(175,163,216,0.7), rgba(244,192,122,0.7)), url('https://source.unsplash.com/random/1600x900/?lotus');
+      background-size: cover; background-position: center; padding: 80px 0; text-align: center; color: #F5F5F7;
+    }
+    .hero-section h1 { font-size: 3.2rem; margin-bottom: 15px; line-height: 1.2; }
+    .hero-section p { font-size: 1.2rem; margin-bottom: 20px; line-height: 1.5; }
+    .hero-section .btn-large { background: #F4C07A; color: #F5F5F7; font-family: 'Open Sans', sans-serif; font-size: 1.1rem; }
+    .section { padding: 40px 0; }
+    .section h4 { font-size: 2.5rem; margin-bottom: 25px; text-align: center; line-height: 1.3; }
+    .section h4::after { content: ''; display: block; width: 40px; height: 2px; background: #F4C07A; margin: 8px auto; }
+    .card { border-radius: 6px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); background: #FDFCF9; transition: transform 0.3s; }
+    .card:hover { transform: translateY(-3px); }
+    .card-title { font-family: 'Lora', serif; font-size: 1.5rem; color: #F4C07A; }
+    .team-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .team-member {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 15px;
+      height: 340px;
+      width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .team-member img { border-radius: 50%; width: 100px; height: 100px; object-fit: cover; margin-bottom: 10px; border: 2px solid #F4C07A; }
+    .team-member h5 { font-size: 1.3rem; margin-bottom: 5px; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+    .team-member p.team-role { font-size: 1rem; color: #F4C07A; margin-bottom: 5px; line-height: 1.5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+    .team-member p.team-description { font-size: 0.9rem; color: #3A3F5E; line-height: 1.6; letter-spacing: 0.2px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; max-width: 100%; }
+    .social-icon i { transition: color 0.3s; color: #F4C07A; }
+    .social-icon i:hover { color: #AFA3D8; }
+    .page-footer { background: #3A3F5E; padding: 10px 0; }
+    .page-footer p { color: #F5F5F7; margin: 0; text-align: center; font-size: 0.9rem; }
+    @media (max-width: 600px) {
+      .hero-section h1 { font-size: 2.5rem; }
+      .hero-section p { font-size: 1rem; }
+      .section h4 { font-size: 2rem; }
+      .team-member { height: 360px; }
+    }
+  </style>
 </head>
-
 <body>
-
-  <!-- Skip Link for Accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <!-- Header / Navigation -->
   <header>
-    <nav class="nav-wrapper">
+    <nav class="nav-wrapper" role="navigation">
       <div class="container">
-        <a href="#" class="brand-logo white-text">Manoveda</a>
+        <a href="#" class="brand-logo">
+          <img src="https://instagram.famd4-1.fna.fbcdn.net/v/t51.29350-15/461173678_502151266014502_7727925301373072396_n.webp?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjEwODB4MTA4MC5zZHIuZjI5MzUwLmRlZmF1bHRfaW1hZ2UifQ&_nc_ht=instagram.famd4-1.fna.fbcdn.net&_nc_cat=110&_nc_oc=Q6cZ2QEImbsy_fadJXDQzTeRKMZds9jo5dfZC0sTHahujM6bzMkJFkbjHHBqbSrbDQGiDlSE8iVhL3MDmEMtc9bvAQbq&_nc_ohc=91UKMl7MnfIQ7kNvwHZUppT&_nc_gid=XsGdH8er5mw6ba-BiOBWeg&edm=AP4sbd4BAAAA&ccb=7-5&ig_cache_key=MzQ2MjY1Njk4NDQxNDExMjQ1OQ%3D%3D.3-ccb7-5&oh=00_AfIsxYfTYx6xm26Y4bJAyA8TlJSzLuq8apYsyV_EJVl0AA&oe=682CBDA3&_nc_sid=7a9f4b"
+               onerror="this.onerror=null; this.src='https://pbs.twimg.com/profile_images/1835279060626534400/gVW5BwVT_400x400.jpg';"
+               alt="Manoveda Logo">
+        </a>
+        <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="fas fa-bars" style="color: #3A3F5E;"></i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="#home" class="white-text">Home</a></li>
-          <li><a href="#about" class="white-text">About Us</a></li>
-          <li><a href="#services" class="white-text">Services</a></li>
-          <li><a href="#team" class="white-text">Team</a></li>
-          <li><a href="#contact" class="white-text">Connect with Us</a></li>
+          <li><a href="#home" aria-current="page">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Connect</a></li>
         </ul>
       </div>
     </nav>
+    <ul id="mobile-nav" class="sidenav">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Connect</a></li>
+    </ul>
   </header>
-
-  <!-- Main Content -->
   <main id="main-content">
-    <!-- Hero Section -->
     <section id="home" class="hero-section">
       <div class="container">
-        <h1>Holistic Mental Health for a Balanced Life</h1>
-        <p>Personalized care that promotes well-being and emotional resilience.</p>
-        <a href="#services" class="btn-large waves-effect waves-light white teal-text">Get Started</a>
-        <a href="#about" class="btn-large waves-effect waves-light white teal-text">Learn More</a>
+        <h1>Vedic Wisdom for Inner Peace</h1>
+        <p>Blending ancient Vedic practices with modern psychology for holistic mental health.</p>
+        <a href="#services" class="btn-large waves-effect">Start Now</a>
+        <a href="#about" class="btn-large waves-effect">Learn More</a>
       </div>
     </section>
-
-    <!-- About Us Section -->
     <section id="about" class="section container">
-      <h4 class="center-align">About Us</h4>
-      <p>We provide holistic mental health care that blends modern psychology and ancient Vedic wisdom. Our mission is to offer personalized treatment that fosters emotional resilience and well-being for the long term.</p>
+      <h4>About Us</h4>
+      <p>Manoveda integrates Vedic wisdom with modern psychology, offering personalized care rooted in mindfulness and balance for lasting well-being.</p>
     </section>
-
-    <!-- Services Section -->
     <section id="services" class="section container">
-      <h4 class="center-align">Our Services</h4>
+      <h4>Our Services</h4>
       <div class="row">
         <div class="col s12 m6">
           <div class="card">
             <div class="card-content">
               <span class="card-title">Individual Therapy</span>
-              <p>One-on-one therapy for personal mental health needs.</p>
+              <p>Vedic mindfulness meets evidence-based therapy.</p>
             </div>
           </div>
         </div>
@@ -70,7 +122,7 @@
           <div class="card">
             <div class="card-content">
               <span class="card-title">Group Therapy</span>
-              <p>Group sessions to share experiences and heal together.</p>
+              <p>Healing circles based on Vedic connection.</p>
             </div>
           </div>
         </div>
@@ -78,7 +130,7 @@
           <div class="card">
             <div class="card-content">
               <span class="card-title">Online Counseling</span>
-              <p>Accessible virtual sessions that bring mental health care to your home.</p>
+              <p>Virtual sessions with Vedic insights.</p>
             </div>
           </div>
         </div>
@@ -86,120 +138,106 @@
           <div class="card">
             <div class="card-content">
               <span class="card-title">Workshops</span>
-              <p>Interactive workshops covering topics like stress management and mindfulness.</p>
+              <p>Meditation and Vedic mindfulness programs.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Team Section -->
-    <section id="team" class="team-section section container">
-      <h4 class="center-align">Meet Our Team</h4>
-      <div class="row">
-        <div class="col s12 m4">
+    <section id="team" class="section container">
+      <h4>Meet Our Team</h4>
+      <div class="row team-row">
+        <div class="col s12 m3">
           <div class="team-member">
             <img src="https://www.gravatar.com/avatar/abc123" alt="Pranjal Vyas, Founder" loading="lazy">
-            <h5 class="team-name">Pranjal Vyas</h5>
+            <h5>Pranjal Vyas</h5>
             <p class="team-role">Founder</p>
             <p class="team-description">Pranjal leads our vision with a commitment to holistic mental wellness.</p>
           </div>
         </div>
-        <div class="col s12 m4">
-          <div class="team-member">
-            <img src="https://www.gravatar.com/avatar/def456" alt="Harshita Rai, Co-Founder / COO" loading="lazy">
-            <h5 class="team-name">Harshita Rai</h5>
-            <p class="team-role">Co-Founder / COO</p>
-            <p class="team-description">Harshita plays a key role in overseeing the operations and strategic direction of the organization.</p>
-          </div>
-        </div>
-        <div class="col s12 m4">
+        <div class="col s12 m3">
           <div class="team-member">
             <img src="https://www.gravatar.com/avatar/ghi789" alt="Aastha Prahladka, Counselling Psychologist" loading="lazy">
-            <h5 class="team-name">Aastha Prahladka</h5>
+            <h5>Aastha Prahladka</h5>
             <p class="team-role">Counselling Psychologist (PRO BONO)</p>
-            <p class="team-description">Aastha is leading the PRO BONO division, providing mental health support to underserved communities.</p>
+            <p class="team-description">Aastha leads the PRO BONO division, providing mental health support to underserved communities.</p>
           </div>
         </div>
-        <div class="col s12 m4">
+        <div class="col s12 m3">
           <div class="team-member">
             <img src="https://www.gravatar.com/avatar/jkl012" alt="Vasundhra Rangra, Lead Psychologist" loading="lazy">
-            <h5 class="team-name">Vasundhra Rangra</h5>
+            <h5>Vasundhra Rangra</h5>
             <p class="team-role">Lead Psychologist</p>
             <p class="team-description">Vasundhra ensures effective operations and service quality.</p>
           </div>
         </div>
-        <div class="col s12 m4">
+        <div class="col s12 m3">
           <div class="team-member">
             <img src="https://www.gravatar.com/avatar/mno345" alt="Vigya Saxena, Head of Social Media" loading="lazy">
-            <h5 class="team-name">Vigya Saxena</h5>
+            <h5>Vigya Saxena</h5>
             <p class="team-role">Head of Social Media</p>
             <p class="team-description">Vigya manages outreach and community engagement through innovative strategies.</p>
           </div>
         </div>
-        <div class="col s12 m4">
+        <div class="col s12 m3">
           <div class="team-member">
             <img src="https://www.gravatar.com/avatar/pqr678" alt="Adv Sonali Satpathy, Hon Advisor Legal Matter Expert" loading="lazy">
-            <h5 class="team-name">Adv Sonali Satpathy</h5>
+            <h5>Adv Sonali Satpathy</h5>
             <p class="team-role">Hon Advisor Legal Matter Expert</p>
             <p class="team-description">Sonali provides expert legal guidance, ensuring compliance and protection of client rights.</p>
           </div>
         </div>
-        <div class="col s12 m4">
+        <div class="col s12 m3">
           <div class="team-member">
             <img src="https://www.gravatar.com/avatar/stu901" alt="Shailja Modi, Psychologist" loading="lazy">
-            <h5 class="team-name">Shailja Modi</h5>
+            <h5>Shailja Modi</h5>
             <p class="team-role">Psychologist</p>
             <p class="team-description">Shailja specializes in providing psychological support, guidance, and interventions that promote emotional well-being and resilience.</p>
           </div>
         </div>
+        <div class="col s12 m3">
+          <div class="team-member">
+            <img src="https://www.gravatar.com/avatar/vwx234" alt="Suman Rao, Psychologist" loading="lazy">
+            <h5>Suman Rao</h5>
+            <p class="team-role">Psychologist</p>
+            <p class="team-description">Suman specializes in counseling with a focus on English, Hindi, and Kannada-speaking clients, offering empathetic and personalized therapy.</p>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <div class="team-member">
+            <img src="https://www.gravatar.com/avatar/yzx567" alt="Dr Chirag Ambaliya, Consultant Psychiatrist" loading="lazy">
+            <h5>Dr Chirag Ambaliya</h5>
+            <p class="team-role">Consultant Psychiatrist</p>
+            <p class="team-description">Dr Chirag provides expert psychiatric care, focusing on comprehensive mental health solutions.</p>
+          </div>
+        </div>
       </div>
     </section>
-
-    <!-- Connect with Us Section -->
     <section id="contact" class="section container">
-      <h4 class="center-align">Connect with Us</h4>
+      <h4>Connect with Us</h4>
       <div class="row center">
-        <!-- Facebook -->
-        <div class="col s3">
-          <a href="https://www.facebook.com/manovedaorg" target="_blank" class="social-icon" aria-label="Facebook">
-            <i class="fab fa-facebook-f fa-3x teal-text"></i>
-          </a>
-        </div>
-
-        <!-- Twitter -->
-        <div class="col s3">
-          <a href="https://x.com/manovedaorg" target="_blank" class="social-icon" aria-label="Twitter">
-            <i class="fab fa-twitter fa-3x teal-text"></i>
-          </a>
-        </div>
-
-        <!-- Instagram -->
-        <div class="col s3">
-          <a href="https://www.instagram.com/manoveda_org/" target="_blank" class="social-icon" aria-label="Instagram">
-            <i class="fab fa-instagram fa-3x teal-text"></i>
-          </a>
-        </div>
-
-        <!-- LinkedIn -->
-        <div class="col s3">
-          <a href="https://www.linkedin.com/company/manovedaorg" target="_blank" class="social-icon" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in fa-3x teal-text"></i>
-          </a>
-        </div>
+        <div class="col s3"><a href="https://www.facebook.com/manovedaorg" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a></div>
+        <div class="col s3"><a href="https://x.com/manovedaorg" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter fa-2x"></i></a></div>
+        <div class="col s3"><a href="https://www.instagram.com/manoveda_org/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a></div>
+        <div class="col s3"><a href="https://www.linkedin.com/company/manovedaorg" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in fa-2x"></i></a></div>
       </div>
     </section>
   </main>
-
-  <!-- Footer -->
   <footer class="page-footer">
-    <div class="container center">
-      <p>&copy; 2025 Manoveda Wellness Hub | All Rights Reserved</p>
-    </div>
+    <div class="container"><p>© 2025 Manoveda Wellness Hub | All Rights Reserved</p></div>
   </footer>
-
-  <!-- Materialize JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var sidenavs = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(sidenavs);
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
-
 </html>
