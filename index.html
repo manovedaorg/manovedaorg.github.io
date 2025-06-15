@@ -4,239 +4,797 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Holistic mental health blending Vedic wisdom and modern psychology.">
-  <meta name="keywords" content="Mental Health, Vedic Wisdom, Therapy, Counseling">
+  <meta name="keywords" content="Mental Health, Vedic Wisdom, Therapy, Counseling, Mindfulness">
   <meta property="og:title" content="Manoveda Wellness Hub">
   <meta property="og:description" content="Holistic mental health blending Vedic wisdom and modern psychology.">
-  <meta property="og:image" content="https://instagram.famd4-1.fna.fbcdn.net/v/t51.29350-15/461173678_502151266014502_7727925301373072396_n.webp?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjEwODB4MTA4MC5zZHIuZjI5MzUwLmRlZmF1bHRfaW1hZ2UifQ&_nc_ht=instagram.famd4-1.fna.fbcdn.net&_nc_cat=110&_nc_oc=Q6cZ2QEImbsy_fadJXDQzTeRKMZds9jo5dfZC0sTHahujM6bzMkJFkbjHHBqbSrbDQGiDlSE8iVhL3MDmEMtc9bvAQbq&_nc_ohc=91UKMl7MnfIQ7kNvwHZUppT&_nc_gid=XsGdH8er5mw6ba-BiOBWeg&edm=AP4sbd4BAAAA&ccb=7-5&ig_cache_key=MzQ2MjY1Njk4NDQxNDExMjQ1OQ%3D%3D.3-ccb7-5&oh=00_AfIsxYfTYx6xm26Y4bJAyA8TlJSzLuq8apYsyV_EJVl0AA&oe=682CBDA3&_nc_sid=7a9f4b">
+  <meta property="og:image" content="https://example.com/manoveda-social-preview.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <title>Manoveda Wellness Hub</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <title>Manoveda Wellness Hub | Holistic Mental Health</title>
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@300;400;500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
   <style>
-    body { font-family: 'Open Sans', sans-serif; color: #3A3F5E; background: #F5F5F7; }
-    h1, h4, h5 { font-family: 'Lora', serif; color: #3A3F5E; }
-    .skip-link { position: absolute; top: -40px; left: 0; background: #3A3F5E; color: #F5F5F7; padding: 8px; z-index: 100; }
-    .skip-link:focus { top: 0; }
-    .nav-wrapper { background: #AFA3D8; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    .brand-logo img { height: 40px; vertical-align: middle; }
-    .nav-wrapper a { font-family: 'Lora', serif; color: #3A3F5E; font-size: 1.1rem; }
-    .hero-section {
-      background: linear-gradient(rgba(175,163,216,0.7), rgba(244,192,122,0.7)), url('https://source.unsplash.com/random/1600x900/?lotus');
-      background-size: cover; background-position: center; padding: 80px 0; text-align: center; color: #F5F5F7;
+    :root {
+      --primary-dark: #2C0E4A; /* Deep cosmic purple */
+      --primary-medium: #D468FF; /* Vibrant lilac */
+      --primary-light: #F3C7FF; /* Soft lavender */
+      --accent-warm: #FF8C1A; /* Radiant saffron */
+      --accent-light: #FFF2E0; /* Golden cream */
+      --text-dark: #1A1A1A; /* Near-black */
+      --text-medium: #5C5C5C; /* Soft gray */
+      --text-light: #A3A3A3; /* Light gray */
+      --bg-light: #FDF9F5; /* Warm ivory */
+      --bg-white: #FFFFFF; /* Pure white */
+      --transition: all 0.3s ease-in-out;
     }
-    .hero-section h1 { font-size: 3.2rem; margin-bottom: 15px; line-height: 1.2; }
-    .hero-section p { font-size: 1.2rem; margin-bottom: 20px; line-height: 1.5; }
-    .hero-section .btn-large { background: #F4C07A; color: #F5F5F7; font-family: 'Open Sans', sans-serif; font-size: 1.1rem; }
-    .section { padding: 40px 0; }
-    .section h4 { font-size: 2.5rem; margin-bottom: 25px; text-align: center; line-height: 1.3; }
-    .section h4::after { content: ''; display: block; width: 40px; height: 2px; background: #F4C07A; margin: 8px auto; }
-    .card { border-radius: 6px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); background: #FDFCF9; transition: transform 0.3s; }
-    .card:hover { transform: translateY(-3px); }
-    .card-title { font-family: 'Lora', serif; font-size: 1.5rem; color: #F4C07A; }
-    .team-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      color: var(--text-dark);
+      background-color: var(--bg-light);
+      line-height: 1.8;
+      overflow-x: hidden;
     }
-    .team-member {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 15px;
-      height: 340px;
+
+    h1, h2, h3, h4 {
+      font-family: 'Merriweather', Georgia, serif;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    /* Skip Link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary-dark);
+      color: var(--bg-white);
+      padding: 12px;
+      z-index: 1000;
+      transition: top 0.3s;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+
+    .animate-fade-up {
+      opacity: 0;
+      animation: fadeUp 0.8s ease-out forwards;
+      will-change: transform, opacity;
+    }
+
+    .hero h1 { animation-delay: 0.2s; }
+    .hero p { animation-delay: 0.4s; }
+    .section .card:nth-child(1) { animation-delay: 0.3s; }
+    .section .card:nth-child(2) { animation-delay: 0.4s; }
+    .section .card:nth-child(3) { animation-delay: 0.5s; }
+    .section .card:nth-child(4) { animation-delay: 0.6s; }
+    .section .card:nth-child(5) { animation-delay: 0.7s; }
+    .section .card:nth-child(6) { animation-delay: 0.8s; }
+    .section .card:nth-child(7) { animation-delay: 0.9s; }
+    .section .card:nth-child(8) { animation-delay: 1s; }
+
+    /* Navigation */
+    nav {
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid var(--primary-light);
+      position: fixed;
+      top: 0;
       width: 100%;
-      box-sizing: border-box;
+      z-index: 1000;
+    }
+
+    .nav-wrapper {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 5%;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Lora', Georgia, serif;
+      font-weight: 500;
+      font-size: 1.3rem;
+      color: var(--primary-dark);
+    }
+
+    .brand-logo i {
+      font-size: 2rem;
+      color: var(--primary-dark);
+    }
+
+    nav ul a {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      color: var(--text-dark);
+      transition: var(--transition);
+    }
+
+    nav ul a:hover {
+      color: var(--accent-warm);
+      background: transparent;
+    }
+
+    .sidenav {
+      background: var(--bg-white);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidenav li a {
+      color: var(--text-dark);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+
+    .sidenav li a:hover {
+      color: var(--accent-warm);
+      background: transparent;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, rgba(44, 14, 74, 0.8) 0%, rgba(212, 104, 255, 0.7) 100%);
+      padding: 120px 5% 80px;
+      color: var(--bg-white);
+      position: relative;
       overflow: hidden;
     }
-    .team-member img { border-radius: 50%; width: 100px; height: 100px; object-fit: cover; margin-bottom: 10px; border: 2px solid #F4C07A; }
-    .team-member h5 { font-size: 1.3rem; margin-bottom: 5px; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
-    .team-member p.team-role { font-size: 1rem; color: #F4C07A; margin-bottom: 5px; line-height: 1.5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
-    .team-member p.team-description { font-size: 0.9rem; color: #3A3F5E; line-height: 1.6; letter-spacing: 0.2px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; max-width: 100%; }
-    .social-icon i { transition: color 0.3s; color: #F4C07A; }
-    .social-icon i:hover { color: #AFA3D8; }
-    .page-footer { background: #3A3F5E; padding: 10px 0; }
-    .page-footer p { color: #F5F5F7; margin: 0; text-align: center; font-size: 0.9rem; }
+
+    .hero-content {
+      max-width: 900px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      margin-bottom: 20px;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero p {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.95;
+    }
+
+    /* Sections */
+    .section {
+      padding: 100px 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: var(--primary-dark);
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-header h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--accent-warm);
+      border-radius: 2px;
+    }
+
+    .section-header p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--text-medium);
+    }
+
+    /* Services */
+    .services-grid .card {
+      background: linear-gradient(145deg, var(--bg-white), var(--bg-light));
+      border-radius: 16px;
+      overflow: hidden;
+      transition: var(--transition);
+      min-height: 320px; /* Unified height */
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .services-grid .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-icon {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--primary-light), var(--primary-medium));
+      color: var(--bg-white);
+      font-size: 2.2rem;
+    }
+
+    .service-content {
+      padding: 30px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .service-content h3 {
+      font-family: 'Merriweather', serif;
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: var(--primary-dark);
+    }
+
+    .service-content p {
+      color: var(--text-medium);
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    /* Team */
+    .team-grid .card {
+      background: linear-gradient(145deg, var(--bg-white), var(--bg-light));
+      border-radius: 16px;
+      overflow: hidden;
+      transition: var(--transition);
+      text-align: center;
+      min-height: 400px; /* Increased for consistency */
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .team-grid .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-icon {
+      font-size: 3.5rem;
+      color: var(--primary-medium);
+      background: var(--accent-light);
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+      border: 4px solid var(--primary-light);
+    }
+
+    .card-content {
+      padding: 25px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .team-card h4 {
+      font-family: 'Merriweather', serif;
+      font-size: 1.4rem;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+
+    .team-role {
+      color: var(--accent-warm);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      margin-bottom: 15px;
+      line-height: 1.4;
+      max-height: 3.2em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    .team-bio {
+      color: var(--text-medium);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      flex-grow: 1;
+    }
+
+    /* Contact */
+    .contact-info {
+      text-align: center;
+    }
+
+    .contact-info p {
+      margin-bottom: 30px;
+      color: var(--text-medium);
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      background: var(--primary-medium);
+      color: var(--bg-white);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      background: var(--accent-warm);
+      transform: scale(1.05);
+    }
+
+    .social-link i {
+      font-size: 1.2rem;
+      color: var(--bg-white);
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(180deg, var(--primary-dark), #4A1A7A);
+      color: var(--bg-white);
+      padding: 60px 5% 40px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .footer-logo-icon {
+      font-size: 1.8rem;
+      color: var(--bg-white);
+    }
+
+    .footer-logo-text {
+      font-family: 'Lora', Georgia, serif;
+      font-weight: 500;
+      font-size: 1.3rem;
+      color: var(--bg-white);
+      letter-spacing: 0.3px;
+    }
+
+    /* Materialize Tooltip Override */
+    .material-tooltip {
+      background: var(--primary-dark) !important;
+      color: var(--bg-white) !important;
+      border: 1px solid var(--accent-warm);
+      border-radius: 8px;
+      padding: 10px 15px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+    }
+
+    .backdrop {
+      border-top-color: var(--primary-dark) !important;
+    }
+
+    .copyright {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-light);
+      font-size: 0.85rem;
+    }
+
+    /* Responsive Overrides */
+    @media (max-width: 1200px) {
+      .team-grid .card {
+        min-height: 360px;
+      }
+      .team-icon {
+        width: 100px;
+        height: 100px;
+        font-size: 3rem;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .section {
+        padding: 80px 5%;
+      }
+      .services-grid .card {
+        min-height: 300px;
+      }
+      .team-grid .card {
+        min-height: 340px;
+      }
+      .team-icon {
+        width: 90px;
+        height: 90px;
+        font-size: 2.8rem;
+      }
+    }
+
     @media (max-width: 600px) {
-      .hero-section h1 { font-size: 2.5rem; }
-      .hero-section p { font-size: 1rem; }
-      .section h4 { font-size: 2rem; }
-      .team-member { height: 360px; }
+      .hero {
+        padding: 100px 5% 60px;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .section {
+        padding: 60px 5%;
+      }
+      .services-grid .card,
+      .team-grid .card {
+        min-height: 280px;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+      .service-icon {
+        height: 80px;
+        font-size: 1.8rem;
+      }
+      .service-content {
+        padding: 20px;
+      }
+      .team-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+      }
+      .material-tooltip {
+        width: 180px;
+        font-size: 0.8rem;
+        white-space: normal;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <header>
-    <nav class="nav-wrapper" role="navigation">
-      <div class="container">
-        <a href="#" class="brand-logo">
-          <img src="https://instagram.famd4-1.fna.fbcdn.net/v/t51.29350-15/461173678_502151266014502_7727925301373072396_n.webp?stp=dst-jpg_e35_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6IkNBUk9VU0VMX0lURU0uaW1hZ2VfdXJsZ2VuLjEwODB4MTA4MC5zZHIuZjI5MzUwLmRlZmF1bHRfaW1hZ2UifQ&_nc_ht=instagram.famd4-1.fna.fbcdn.net&_nc_cat=110&_nc_oc=Q6cZ2QEImbsy_fadJXDQzTeRKMZds9jo5dfZC0sTHahujM6bzMkJFkbjHHBqbSrbDQGiDlSE8iVhL3MDmEMtc9bvAQbq&_nc_ohc=91UKMl7MnfIQ7kNvwHZUppT&_nc_gid=XsGdH8er5mw6ba-BiOBWeg&edm=AP4sbd4BAAAA&ccb=7-5&ig_cache_key=MzQ2MjY1Njk4NDQxNDExMjQ1OQ%3D%3D.3-ccb7-5&oh=00_AfIsxYfTYx6xm26Y4bJAyA8TlJSzLuq8apYsyV_EJVl0AA&oe=682CBDA3&_nc_sid=7a9f4b"
-               onerror="this.onerror=null; this.src='https://pbs.twimg.com/profile_images/1835279060626534400/gVW5BwVT_400x400.jpg';"
-               alt="Manoveda Logo">
-        </a>
-        <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="fas fa-bars" style="color: #3A3F5E;"></i></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="#home" aria-current="page">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#contact">Connect</a></li>
-        </ul>
-      </div>
-    </nav>
-    <ul id="mobile-nav" class="sidenav">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#team">Team</a></li>
-      <li><a href="#contact">Connect</a></li>
-    </ul>
-  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">
+        <i class="fas fa-flower-tulip"></i> Manoveda
+      </a>
+      <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Connect</a></li>
+      </ul>
+    </div>
+  </nav>
+  <ul class="sidenav" id="mobile-nav">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#contact">Connect</a></li>
+  </ul>
+
+  <!-- Main Content -->
   <main id="main-content">
-    <section id="home" class="hero-section">
-      <div class="container">
-        <h1>Vedic Wisdom for Inner Peace</h1>
-        <p>Blending ancient Vedic practices with modern psychology for holistic mental health.</p>
-        <a href="#services" class="btn-large waves-effect">Start Now</a>
-        <a href="#about" class="btn-large waves-effect">Learn More</a>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="animate-fade-in">Vedic Wisdom for Inner Peace</h1>
+        <p class="animate-fade-in">Blending ancient Vedic practices with modern psychology for holistic mental health.</p>
       </div>
     </section>
-    <section id="about" class="section container">
-      <h4>About Us</h4>
-      <p>Manoveda integrates Vedic wisdom with modern psychology, offering personalized care rooted in mindfulness and balance for lasting well-being.</p>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="section-header animate-fade-up">
+        <h2>About Us</h2>
+        <p>Manoveda integrates ancient Vedic practices with modern psychology, offering personalized care rooted in mindfulness and balance for lasting well-being.</p>
+      </div>
     </section>
-    <section id="services" class="section container">
-      <h4>Our Services</h4>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+      <div class="section-header animate-fade-up">
+        <h2>Our Services</h2>
+      </div>
+      <div class="row services-grid">
+        <div class="col s12 m6 l3">
+          <div class="card animate-fade-up">
+            <div class="service-icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="service-content">
+              <h3>Individual Therapy</h3>
+              <p>Vedic mindfulness meets evidence-based therapy for personalized healing.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l3">
+          <div class="card animate-fade-up">
+            <div class="service-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="service-content">
+              <h3>Group Therapy</h3>
+              <p>Healing circles fostering connection through Vedic principles.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l3">
+          <div class="card animate-fade-up">
+            <div class="service-icon">
+              <i class="fas fa-laptop"></i>
+            </div>
+            <div class="service-content">
+              <h3>Online Counseling</h3>
+              <p>Virtual sessions infused with Vedic insights for accessibility.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l3">
+          <div class="card animate-fade-up">
+            <div class="service-icon">
+              <i class="fas fa-chalkboard-teacher"></i>
+            </div>
+            <div class="service-content">
+              <h3>Workshops</h3>
+              <p>Meditation and mindfulness programs rooted in Vedic wisdom.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section">
+      <div class="section-header animate-fade-up">
+        <h2>Meet Our Team</h2>
+      </div>
+      <div class="row team-grid">
+        <div class="col s12 m6 l3">
+          <div class="card animate-fade-up team-card">
+            <div class="team-icon">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="card-content">
+              <h4>Pranjal Vyas</h4>
+              <p class="team-role">Founder</p>
+              <p class="team-bio">Pranjal leads our vision with a commitment to holistic mental wellness.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l3">
+          <div class="card animate-fade-up team-card">
+            <div class="team-icon">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="card-content">
+              <h4>Aastha Prahladka</h4>
+              <p class="team-role">Counselling Psychologist (Pro Bono)</p>
+              <p class="team-bio">Aastha leads the pro bono division, supporting underserved communities.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l3">
+          <div class="card animate-fade-up team-card">
+            <div class="team-icon">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="card-content">
+              <h4>Vasundhra Rangra</h4>
+              <p class="team-role">Lead Psychologist</p>
+              <p class="team-bio">Vasundhra ensures effective operations and service quality.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l3">
+          <div class="card animate-fade-up team-card">
+            <div class="team-icon">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="card-content">
+              <h4>Vigya Saxena</h4>
+              <p class="team-role">MD, Tara & Head of Social Media</p>
+              <p class="team-bio">Vigya leads Tara’s research and drives our digital outreach.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l3">
+          <div class="card animate-fade-up team-card">
+            <div class="team-icon">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="card-content">
+              <h4>Adv Sonali Satpathy</h4>
+              <p class="team-role">Hon Advisor Legal Matter Expert</p>
+              <p class="team-bio">Sonali provides expert legal guidance for compliance.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l3">
+          <div class="card animate-fade-up team-card">
+            <div class="team-icon">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="card-content">
+              <h4>Shailja Modi</h4>
+              <p class="team-role">Psychologist</p>
+              <p class="team-bio">Shailja specializes in emotional well-being interventions.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l3">
+          <div class="card animate-fade-up team-card">
+            <div class="team-icon">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="card-content">
+              <h4>Suman Rao</h4>
+              <p class="team-role">Psychologist</p>
+              <p class="team-bio">Suman offers therapy in English, Hindi, and Kannada.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l3">
+          <div class="card animate-fade-up team-card">
+            <div class="team-icon">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="card-content">
+              <h4>Dr Chirag Ambaliya</h4>
+              <p class="team-role">Consultant Psychiatrist</p>
+              <p class="team-bio">Dr Chirag provides expert psychiatric care.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="section-header animate-fade-up">
+        <h2>Connect with Us</h2>
+      </div>
       <div class="row">
-        <div class="col s12 m6">
-          <div class="card">
-            <div class="card-content">
-              <span class="card-title">Individual Therapy</span>
-              <p>Vedic mindfulness meets evidence-based therapy.</p>
-            </div>
+        <div class="col s12 contact-info">
+          <p>Follow us on social media to stay updated with our latest programs and wellness tips.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/manovedaorg" class="social-link" aria-label="Follow us on Facebook">
+              <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+            <a href="https://x.com/manovedaorg" class="social-link" aria-label="Follow us on Twitter">
+              <i class="fab fa-twitter"></i> Twitter
+            </a>
+            <a href="https://www.instagram.com/manoveda_org/" class="social-link" aria-label="Follow us on Instagram">
+              <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://www.linkedin.com/company/manovedaorg" class="social-link" aria-label="Follow us on LinkedIn">
+              <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
           </div>
         </div>
-        <div class="col s12 m6">
-          <div class="card">
-            <div class="card-content">
-              <span class="card-title">Group Therapy</span>
-              <p>Healing circles based on Vedic connection.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m6">
-          <div class="card">
-            <div class="card-content">
-              <span class="card-title">Online Counseling</span>
-              <p>Virtual sessions with Vedic insights.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m6">
-          <div class="card">
-            <div class="card-content">
-              <span class="card-title">Workshops</span>
-              <p>Meditation and Vedic mindfulness programs.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="team" class="section container">
-      <h4>Meet Our Team</h4>
-      <div class="row team-row">
-        <div class="col s12 m3">
-          <div class="team-member">
-            <img src="https://www.gravatar.com/avatar/abc123" alt="Pranjal Vyas, Founder" loading="lazy">
-            <h5>Pranjal Vyas</h5>
-            <p class="team-role">Founder</p>
-            <p class="team-description">Pranjal leads our vision with a commitment to holistic mental wellness.</p>
-          </div>
-        </div>
-        <div class="col s12 m3">
-          <div class="team-member">
-            <img src="https://www.gravatar.com/avatar/ghi789" alt="Aastha Prahladka, Counselling Psychologist" loading="lazy">
-            <h5>Aastha Prahladka</h5>
-            <p class="team-role">Counselling Psychologist (PRO BONO)</p>
-            <p class="team-description">Aastha leads the PRO BONO division, providing mental health support to underserved communities.</p>
-          </div>
-        </div>
-        <div class="col s12 m3">
-          <div class="team-member">
-            <img src="https://www.gravatar.com/avatar/jkl012" alt="Vasundhra Rangra, Lead Psychologist" loading="lazy">
-            <h5>Vasundhra Rangra</h5>
-            <p class="team-role">Lead Psychologist</p>
-            <p class="team-description">Vasundhra ensures effective operations and service quality.</p>
-          </div>
-        </div>
-        <div class="col s12 m3">
-          <div class="team-member">
-            <img src="https://www.gravatar.com/avatar/mno345" alt="Vigya Saxena, Head of Social Media" loading="lazy">
-            <h5>Vigya Saxena</h5>
-            <p class="team-role">Head of Social Media</p>
-            <p class="team-description">Vigya manages outreach and community engagement through innovative strategies.</p>
-          </div>
-        </div>
-        <div class="col s12 m3">
-          <div class="team-member">
-            <img src="https://www.gravatar.com/avatar/pqr678" alt="Adv Sonali Satpathy, Hon Advisor Legal Matter Expert" loading="lazy">
-            <h5>Adv Sonali Satpathy</h5>
-            <p class="team-role">Hon Advisor Legal Matter Expert</p>
-            <p class="team-description">Sonali provides expert legal guidance, ensuring compliance and protection of client rights.</p>
-          </div>
-        </div>
-        <div class="col s12 m3">
-          <div class="team-member">
-            <img src="https://www.gravatar.com/avatar/stu901" alt="Shailja Modi, Psychologist" loading="lazy">
-            <h5>Shailja Modi</h5>
-            <p class="team-role">Psychologist</p>
-            <p class="team-description">Shailja specializes in providing psychological support, guidance, and interventions that promote emotional well-being and resilience.</p>
-          </div>
-        </div>
-        <div class="col s12 m3">
-          <div class="team-member">
-            <img src="https://www.gravatar.com/avatar/vwx234" alt="Suman Rao, Psychologist" loading="lazy">
-            <h5>Suman Rao</h5>
-            <p class="team-role">Psychologist</p>
-            <p class="team-description">Suman specializes in counseling with a focus on English, Hindi, and Kannada-speaking clients, offering empathetic and personalized therapy.</p>
-          </div>
-        </div>
-        <div class="col s12 m3">
-          <div class="team-member">
-            <img src="https://www.gravatar.com/avatar/yzx567" alt="Dr Chirag Ambaliya, Consultant Psychiatrist" loading="lazy">
-            <h5>Dr Chirag Ambaliya</h5>
-            <p class="team-role">Consultant Psychiatrist</p>
-            <p class="team-description">Dr Chirag provides expert psychiatric care, focusing on comprehensive mental health solutions.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="contact" class="section container">
-      <h4>Connect with Us</h4>
-      <div class="row center">
-        <div class="col s3"><a href="https://www.facebook.com/manovedaorg" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f fa-2x"></i></a></div>
-        <div class="col s3"><a href="https://x.com/manovedaorg" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter fa-2x"></i></a></div>
-        <div class="col s3"><a href="https://www.instagram.com/manoveda_org/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a></div>
-        <div class="col s3"><a href="https://www.linkedin.com/company/manovedaorg" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in fa-2x"></i></a></div>
       </div>
     </section>
   </main>
-  <footer class="page-footer">
-    <div class="container"><p>© 2025 Manoveda Wellness Hub | All Rights Reserved</p></div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo">
+        <i class="fas fa-flower-tulip footer-logo-icon"></i>
+        <span class="footer-logo-text tooltipped" data-position="top" data-tooltip="Tārā Unit: Transformative Analysis for Resilience and Awareness" aria-label="Manoveda with TARA Unit tooltip">Tārā</span>
+      </div>
+      <div class="copyright">
+        <p>© <span id="year">2025</span> Manoveda Wellness Hub. All Rights Reserved.</p>
+      </div>
+    </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var sidenavs = document.querySelectorAll('.sidenav');
-      M.Sidenav.init(sidenavs);
-    });
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
+    $(document).ready(function(){
+      // Initialize Materialize components
+      $('.sidenav').sidenav();
+      $('.tooltipped').tooltip();
+
+      // Smooth scroll for anchor links
+      $('a[href^="#"]').on('click', function(e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        const targetId = $(this).attr('href');
+        const targetElement = $(targetId);
+        if (targetElement.length) {
+          $('html, body').animate({
+            scrollTop: targetElement.offset().top - 80
+          }, 800);
+        }
       });
+
+      // Update copyright year
+      $('#year').text(new Date().getFullYear());
+
+      // Header scroll effect
+      const header = $('nav');
+      $(window).on('scroll', function() {
+        if ($(window).scrollTop() > 50) {
+          header.css('box-shadow', '0 4px 12px rgba(0, 0, 0, 0.1)');
+        } else {
+          header.css('box-shadow', '0 4px 12px rgba(0, 0, 0, 0.05)');
+        }
+      });
+
+      // Scroll-triggered animations
+      const animateElements = document.querySelectorAll('.section-header, .card');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-up');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      animateElements.forEach(el => observer.observe(el));
     });
   </script>
 </body>
